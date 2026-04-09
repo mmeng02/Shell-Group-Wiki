@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Installing amber on the cluster - MSSGroupWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23.0" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;action=edit" />
+<link rel="edit" title="Edit" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;action=edit" />
+<link rel="shortcut icon" href="http://zin.cnsi.ucsb.edu/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://zin.cnsi.ucsb.edu/wiki/opensearch_desc.php" title="MSSGroupWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://zin.cnsi.ucsb.edu/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="MSSGroupWiki Atom feed" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.skinning.interface|mediawiki.ui.button|skins.vector.styles&amp;only=styles&amp;skin=vector&amp;*.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: wikidb:resourceloader:filter:minify-css:7:b36fd1c042133c9c9b60260f7c29b237 */</style>
+<script src="../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Installing_amber_on_the_cluster","wgTitle":"Installing amber on the cluster","wgCurRevisionId":1603,"wgRevisionId":1603,"wgArticleId":1307,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Thuang","wgUserGroups":["*","user","autoconfirmed"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Installing_amber_on_the_cluster","wgUserId":49,"wgUserEditCount":2,"wgUserRegistration":1637780965000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"preview":false,"previewDialog":false,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,
+"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"watchlisttoken":"61ed78eb5fc23f4683020f6f9dd67bba03d74db5"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"6b81ca9b6751d53826649ea2a31502d1+\\","patrolToken":false,"watchToken":"f05cf5441f578946148c3f3dfae135b2+\\"});},{},{});
+/* cache key: wikidb:resourceloader:filter:minify-js:7:1a3ef4316b698667dadcf21c3a09d6a6 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Installing_amber_on_the_cluster skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Installing amber on the cluster</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From MSSGroupWiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="./Special:Random.html#mw-navigation">navigation</a>, 					<a href="./Special:Random.html#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><h2><span class="mw-headline" id="Installing_Amber14_on_the_group_cluster">Installing Amber14 on the group cluster</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;action=edit&amp;section=1" title="Edit section: Installing Amber14 on the group cluster">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>While the instructions below specifically describe compiling amber14 on zin using the Intel 12 compiler, this is also a good start if you're trying to perform a local installs or work with available Intel compiler libraries.  First off, gcc (and g++/gfortran) 4.7.4 is currently installed and is run as the default c, c++, and fortran compiler.  However, amber will purportedly run faster when compiled with an Intel compiler, the process for which is outlined here.
+</p><p><b>1)</b> First step is to obtain the AmberTools15 and Amber14 packages, unpacking with
+</p>
+<pre>    <code> tar xvfj Amber14.tar.bz2 </code>
+   
+</pre>
+<p>The code from both packages should be placed in a directory called <b>amber14</b>.
+</p><p><b>2)</b> The available Intel 12.0.4 compiler and its associated libraries are not on the default path.  The path may be appropriately updated with the following code:
+</p>
+<pre>   <code>
+   export AMBERHOME=$PWD
+   export CPLUS_INCLUDE_PATH=/home/cask0/home/jmonroe/bin/gcc4.6/include/c++/4.6.3:$LD_LIBRARY_PATH
+   export LD_LIBRARY_PATH=/share/apps/x86_64/intel/composerxe-2011.4.191/lib/intel64:/home/cask0/home/jmonroe/bin/gcc4.6/lib64:$LD_LIBRARY_PATH
+   export PATH=/share/apps/x86_64/intel/composerxe-2011.4.191/bin:/home/cask0/home/jmonroe/bin/gcc4.6/bin:$PATH
+   export MKL_HOME=/share/apps/x86_64/intel/composerxe-2011.4.191/mkl
+   source /share/apps/x86_64/intel/composerxe-2011.4.191/bin/iccvars.sh intel64 </code>
+   
+</pre>
+<p>This may be placed in a script and run with <code> source above_script.sh </code> or directly from the command line.  The first line assumes the user is in the <b>amber14</b> directory, otherwise replace <b>$PWD</b> with <b>/path/to/amber14/</b>.  The next line ensures that the correct c++ libraries linked to the correct version of gcc are used (more on this below).  The <b>LD_LIBRARY_PATH</b>variable defines the default libraries that are read.  The Intel 12.0.4 libraries and correct gcc version library directories must be added to this.  <b>PATH</b> is adjusted to include the Intel compilers for c, c++, and fortran.  The last couple of lines ensure that the Math Kernel libraries and correct settings associated with the most up to date Intel compiler that we have (version 12.0.4) are used.
+</p><p><b>3)</b> One problem: Intel 12.0.4 is not compatible with gcc 4.7.4 libraries that must be accessed.  So, an older version must be used.  Below is how to do a quick local install of gcc 4.6.3.  Once the package is obtained (try, for example, gcc-4.6.3.tar.gz from <a rel="nofollow" class="external autonumber" href="https://ftp.gnu.org/gnu/gcc/gcc-4.6.3/">[1]</a>) and unpacked, likely to <b>gcc-4.6.3</b>, create a target directory where you want the code to be compiled to.  This should be owned by you and off your home directory somewhere.  Also create a build-gcc directory to use while compiling.  A good place for this is on the same level as the directory which contains the unpacked source code.  Once in this build directory, try
+</p>
+<pre>   <code> ./configure --prefix=/path/to/target/compile/local/dir </code>
+</pre>
+<p>If any packages such as GMP, MPFR, or MPC are missing, a trick to quickly get them for only this local install is to go into the unpacked <b>gcc-4.6.3</b> directory and run
+</p>
+<pre>   <code> ./contrib/download_prerequisites </code>
+   
+</pre>
+<p>This should do the trick, and you should hopefully be able to run the previous configure script without issues.  Then run
+</p>
+<pre>   <code>
+   make
+   make install </code>
+   
+</pre>
+<p>Note that this will take a long time, but at the end, you should have a local install of gcc 4.6.3.  Also, please not that <i>most any</i> program can be compiled and installed locally with the <b>--prefix=</b> configure option, though you should consult the website of the specific software to make sure.
+</p><p><b>4)</b> Compiling and installing amber14, without mpi, is now easy. Just go to your <b>amber14</b> directory and type
+</p>
+<pre>   <code>
+   ./configure intel
+   make install
+   </code> 
+   
+</pre>
+<p>If you want to compile with mpi (multiple processor) capabilities, keep going...
+</p><p><b>5)</b> Compiling with mpi will require downloading openmpi and placing it the appropriate directory within amber14.  Instructions are in the amber14 manual, but you can just got to <b>/path/to/amber14/AmberTools/src</b> and type
+</p>
+<pre>   <code> ./configure_openmpi intel </code>
+
+</pre>
+<p>Then follow the instructions presented there.  After this, make sure that your <b>LD_LIBRARY_PATH</b> variable is updated to include <b>/path/to/amber14/lib</b>.  It will likely be necessary to also add <b>/path/to/amber14/bin</b> to <b>PATH</b>.  Then just run  
+</p>
+<pre>   <code>
+   ./configure -mpi intel
+   make install </code>
+</pre>
+<p><b>6)</b> All done!  To use amber14 anytime, type the following into the command line or include in a job submission script to correctly set-up your environment for its use:
+</p>
+<pre>   <code>
+   export AMBERHOME=/home/cask0/home/jmonroe/bin/amber14 #or wherever it's just been installed
+   export PATH=$AMBERHOME/bin:$PATH
+   export SANDER=$AMBERHOME/bin/sander
+   export PMEMD=$AMBERHOME/bin/pmemd
+   export LD_LIBRARY_PATH=$AMBERHOME/lib:$LD_LIBRARY_PATH
+   export MPI_HOME=$AMBERHOME
+   export MKL_HOME=/share/apps/x86_64/intel/composerxe-2011.4.191/mkl
+   source /share/apps/x86_64/intel/composerxe-2011.4.191/bin/iccvars.sh intel64 </code>
+</pre>
+<!-- 
+NewPP limit report
+CPU time usage: 0.014 seconds
+Real time usage: 0.014 seconds
+Preprocessor visited node count: 2/1000000
+Preprocessor generated node count: 8/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:1307-0!*!*!*!*!*!* and timestamp 20231010173130 and revision id 1603
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;oldid=1603">http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;oldid=1603</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-userpage"><a href="./User:Thuang.html" class="new" dir="auto" title="Your user page [.]" accesskey=".">Thuang</a></li><li id="pt-mytalk"><a href="./User_talk:Thuang.html" class="new" title="Your talk page [n]" accesskey="n">Talk</a></li><li id="pt-preferences"><a href="./Special:Preferences.html" title="Your preferences">Preferences</a></li><li id="pt-watchlist"><a href="./Special:Watchlist.html" title="A list of pages you are monitoring for changes [l]" accesskey="l">Watchlist</a></li><li id="pt-mycontris"><a href="./Special:Contributions/Thuang.html" title="A list of your contributions [y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special:UserLogout&amp;returnto=Installing+amber+on+the+cluster" title="Log out">Log out</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="./Special:Random.html"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Talk:Installing_amber_on_the_cluster&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="./Special:Random.html#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="./Special:Random.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+					<li id="ca-watch" class="icon"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;action=watch&amp;token=5a0bd50bc62794a5584a66721343ef2d%2B%5C"  title="Add this page to your watchlist [w]" accesskey="w">Watch</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="./Special:Random.html#"></a></h3>
+	<div class="menu">
+		<ul>
+							<li id="ca-move"><a href="./Special:MovePage/Installing_amber_on_the_cluster.html"  title="Move this page [m]" accesskey="m">Move</a></li>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://zin.cnsi.ucsb.edu/wiki/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MSSGroupWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(../images/mssgroup/wikilogo.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-recentchanges"><a href="./Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-randompage"><a href="./Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+			<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="./Special:WhatLinksHere/Installing_amber_on_the_cluster.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="./Special:RecentChangesLinked/Installing_amber_on_the_cluster.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="./Special:Upload.html" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="./Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;oldid=1603" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Installing_amber_on_the_cluster&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 11 September 2015, at 03:35.</li>
+											<li id="footer-info-viewcount">This page has been accessed 30 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:Privacy_policy" title="MSSGroupWiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:About" title="MSSGroupWiki:About">About MSSGroupWiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:General_disclaimer" title="MSSGroupWiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":244});
+}</script>
+	</body>
+</html>

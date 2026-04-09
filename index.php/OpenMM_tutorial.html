@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>OpenMM tutorial - MSSGroupWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23.0" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=edit" />
+<link rel="edit" title="Edit" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=edit" />
+<link rel="shortcut icon" href="http://zin.cnsi.ucsb.edu/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://zin.cnsi.ucsb.edu/wiki/opensearch_desc.php" title="MSSGroupWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://zin.cnsi.ucsb.edu/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="MSSGroupWiki Atom feed" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.skinning.interface|mediawiki.ui.button|skins.vector.styles&amp;only=styles&amp;skin=vector&amp;*.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: wikidb:resourceloader:filter:minify-css:7:b36fd1c042133c9c9b60260f7c29b237 */</style>
+<script src="../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"OpenMM_tutorial","wgTitle":"OpenMM tutorial","wgCurRevisionId":1832,"wgRevisionId":1832,"wgArticleId":1313,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Thuang","wgUserGroups":["*","user","autoconfirmed"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"OpenMM_tutorial","wgUserId":49,"wgUserEditCount":2,"wgUserRegistration":1637780965000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"preview":false,"previewDialog":false,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,
+"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"watchlisttoken":"61ed78eb5fc23f4683020f6f9dd67bba03d74db5"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"6b81ca9b6751d53826649ea2a31502d1+\\","patrolToken":false,"watchToken":"f05cf5441f578946148c3f3dfae135b2+\\"});},{},{});
+/* cache key: wikidb:resourceloader:filter:minify-js:7:1a3ef4316b698667dadcf21c3a09d6a6 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-OpenMM_tutorial skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">OpenMM tutorial</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From MSSGroupWiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="OpenMM_tutorial.html#mw-navigation">navigation</a>, 					<a href="OpenMM_tutorial.html#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>This page is still a bit of a work in progress.
+</p><p>Replicated below is a jupyter notebook I've converted to work with the mediaWiki format, and provides a tutorial on how to use OpenMM to run simulations. It specifically focuses on how to create alchemical systems for running alchemical free energy calculations, which should provide you with a lot of information on using OpenMM.
+</p><p>Anyway, to actually run the tutorial, you will need to install <a rel="nofollow" class="external text" href="https://parmed.github.io/ParmEd/html/index.html">ParmEd</a> and <a rel="nofollow" class="external text" href="http://openmm.org/">OpenMM</a> via <a rel="nofollow" class="external text" href="https://www.anaconda.com/download/">anaconda</a>, which is a nice python package and environment manager.  Then <a rel="nofollow" class="external text" href="https://drive.google.com/drive/folders/1aw846k2Kd5VnKLH5sEGpC4otgOlhdrna?usp=sharing">download</a> the jupyter notebook and the topology and structure files (Ethanol.top and Ethanol.gro) so you can run the notebook (call `jupyter notebook` from the command line and select the downloaded notebook).
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="OpenMM_Tutorial">OpenMM Tutorial</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=edit&amp;section=1" title="Edit section: OpenMM Tutorial">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Shell_Group_Meeting_.3F.3F.3F">Shell Group Meeting&#160;???</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=edit&amp;section=2" title="Edit section: Shell Group Meeting ???">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Jacob_Monroe">Jacob Monroe</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=edit&amp;section=3" title="Edit section: Jacob Monroe">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This tutorial shows how to set-up and run simulations using OpenMM for a simple system with ethanol solvated in a water box. There is much more to OpenMM functionality, but this covers some of the critical points to being able to run a simulation and create custom forces.  More information on ParmEd and OpenMM can be found in their documentation online, which I have found to be mostly helpful.
+</p><p><code>
+</p>
+<pre> from __future__ import division, print_function #Needed if using python 2.7, not if using python 3.x
+ 
+ import sys, os
+ import copy
+ import numpy as np
+ import simtk.openmm as mm
+ import simtk.openmm.app as app
+ import simtk.unit as u
+ import parmed as pmd
+ from parmed.openmm.reporters import NetCDFReporter #Allows us to write trajectories in netcdf format, which I prefer
+</pre>
+<p></code>
+</p><p>First we will set up the system, reading in the appropriate files. I like to do this using ParmEd. OpenMM also has capabilities to read in various file types from different simulation programs in order to get a starting structure and parametrize the system, but the whole purpose of ParmEd is to do just this and it supports a much wider variety of potential energy function forms as well as file formats (not LAMMPS, unfortunately). ParmEd has capabilities to add atoms, bonds, angles, dihedrals, special interactions like 1-4's, etc. (this includes parameters and one of a set of possible functional forms to choose from for the associated potential function) to its `Structure` or `Topology` object classes. This is very powerful, but I won't be working much with it here. 
+</p><p>The other really nice thing about ParmEd is that it interfaces smoothly with OpenMM.  You can create an OpenMM `System` object directly from ParmEd, and if there is a functional form that OpenMM does not support, ParmEd automatically creates a custom force class to handle that. The two programs are currenlty developed in tight synchronization, so for the foreseeable future this should be a nice way to handle things (and both can be install from Omnia tools through anaconda with `conda install -c omnia program_name`.
+</p><p><code>
+</p>
+<pre> #Load in the topology and structure files for initial simulations
+ topFile = 'Ethanol.top'
+ strucFile = 'Ethanol.gro'
+ top = pmd.load_file(topFile, xyz=strucFile)
+</pre>
+<pre> #Set up the temperature and pressure
+ #Note that you can assign units to all quantities passed to OpenMM.
+ #This is nice, because you can choose whatever units you want and it converts internally.
+ #And it forces you to be explicit when you specify your values passed in.
+ #Additionally, if you get a "quantity" object with units associated you can get rid of them through division.
+ #Or, to get the value in different units, use something like pressure.value_in_units(u.atmospheres).
+ temperature = 298.15*u.kelvin
+ pressure = 1.01325*u.bar
+</pre>
+<p></code>
+</p><p>Next we will select the hardware-specific options for performing a run. OpenMM refers to this as the "platform" and it can be one of the following:
+</p>
+<pre> 1. Reference - this is clear, stable reference code and is slow, with double precision as the default
+ 2. CPU - runs on CPUs, only uses single precision
+ 3. CUDA - only for NVIDIA GPUs, can use single, mixed, or double precision
+ 4. OpenCL - runs on any type of GPU and can also run single, mixed, or double precision
+ 
+</pre>
+<p>If you choose to run on a GPU, ALL of the calculations are done on the GPU except writing files. I haven't figured out how to use multiple GPUs yet, but the result is that everything runs about as fast as AMBER16 (not sure about AMBER18). `prop` is then a dictionary that specifies certain features of the platform, like number of threads, the precision, the devices to use, etc.
+</p><p><code>
+</p>
+<pre> platform = mm.Platform.getPlatformByName('CPU')
+ prop = {'Threads': '2', #number of threads for CPU - all definitions must be strings (I think)
+         #'Precision': 'mixed', #for CUDA or OpenCL, select the precision (single, mixed, or double)
+         #'DeviceIndex': '0' #selects which GPUs to use - set this to zero if using CUDA_VISIBLE_DEVICES
+         }
+</pre>
+<p></code>
+</p><p>Now we can set up the system using the ParmEd topologies. This is really quite easy unless there is something that isn't automated properly. To see other options for the nonbondedMethod, see the documentation. Note that I am using a ParmEd function here, not the OpenMM `createSystem` command from an OpenMM topology. As it turns out, the ParmEd version has more options and is a little more flexible.
+</p><p><code>
+</p>
+<pre> system = top.createSystem(
+                           nonbondedMethod=app.PME, #Uses PME for long-range electrostatics, simple cut-off for LJ
+                           nonbondedCutoff=10.0*u.angstroms, #Defines cut-off for non-bonded interactions
+                           rigidWater=True, #Use rigid water molecules
+                           constraints=app.HBonds, #Constrains all bonds involving hydrogens
+                           flexibleConstraints=False, #Whether to include energies for constrained DOFs
+                           removeCMMotion=True, #Whether or not to remove COM motion (don't want to if part of system frozen)
+                           switchDistance=9.0*u.angstroms, #Sets start of switching function
+                          )
+</pre>
+<p></code>
+</p><p>We can now define the properties of an integrator to use on this system. See the documentation on the OpenMM integrator class for more information.
+</p><p><code>
+</p>
+<pre> #Set up the integrator to use as a reference
+ integrator = mm.LangevinIntegrator(
+                                    temperature, #Temperature for Langevin
+                                    1.0/u.picoseconds, #Friction coefficient
+                                    2.0*u.femtoseconds, #Integration timestep
+                                   )
+ integrator.setConstraintTolerance(1.0E-08) #I think this IS the default, but just to be sure
+</pre>
+<p></code>
+</p><p>Because I'm using Langevin I have no need to add a thermostat, but this is done similarly to adding a barostat, which is demonstrated below. OpenMM treats thermostats and barostats like potential energy functions (or `Force` objects). The logic for this seems to be that at the end of the day these are just operations performed on coordinates or velocities at certain steps in the integration. In this way they are like forces in that you calculate what the operations should be. This modularity actually makes it possible to use OpenMM template scripts to fairly easily add a custom integrator, thermostat, or barostat (see OpenMMTools from the Chodera lab for many examples).
+</p><p><code>
+</p>
+<pre> system.addForce(mm.MonteCarloBarostat(
+                                       1.01325*u.bar, #Set pressure to 1 bar
+                                       temperature, #Temperature should be SAME as for thermostat
+                                       125 #Time-steps between MC moves
+                                      )
+                )
+</pre>
+<p></code>
+</p><p>Now we will look at how to create an alchemical system, which gives you insight into how you can create custom forces and modify existing ones. The below is a bunch of code, but hopefully commented well! One thing to note is that once a `simulation` (or just a `context`) is created, you can't modify or add forces except in certain ways. You can still change parameters as long as you make sure to update the context, but you CANNOT change functional forms or things like exclusions or exceptions, as far as I know. You can skip this if you just want to get right to running the simulation.
+</p><p><code>
+</p>
+<pre> #The below sets up an alchemical system
+ 
+ #First get the solute indices
+ soluteIndices = []
+ for res in top.residues:
+     if res.name == 'MOL':
+         for atom in res.atoms:
+             soluteIndices.append(atom.idx)
+ 
+ #We need to add a custom non-bonded force for the solute being alchemically changed
+ #Will be helpful to have handle on non-bonded force handling LJ and coulombic interactions
+ NBForce = None
+ for frc in system.getForces():
+     if (isinstance(frc, mm.NonbondedForce)):
+         NBForce = frc
+ 
+ #Separate out alchemical and regular particles using set objects
+ alchemicalParticles = set(soluteIndices)
+ chemicalParticles = set(range(system.getNumParticles())) - alchemicalParticles
+ 
+ #Define the soft-core function for turning on/off LJ interactions
+ #In energy expressions for CustomNonbondedForce, r is a special variable and refers to the distance between particles
+ #All other variables must be defined somewhere in the function.
+ #The exception are variables like sigma1 and sigma2.
+ #It is understood that a parameter will be added called 'sigma' and that the '1' and '2' are to specify the combining rule.
+ softCoreFunction = '4.0*lambdaLJ*epsilon*x*(x-1.0); x = (1.0/reff_sterics);'
+ softCoreFunction += 'reff_sterics = (0.5*(1.0-lambdaLJ) + ((r/sigma)^6));'
+ softCoreFunction += 'sigma=0.5*(sigma1+sigma2); epsilon = sqrt(epsilon1*epsilon2)'
+ #Define the system force for this function and its parameters
+ SoftCoreForce = mm.CustomNonbondedForce(softCoreFunction)
+ SoftCoreForce.addGlobalParameter('lambdaLJ', 1.0) #Throughout, should follow convention that lambdaLJ=1.0 is fully-interacting state
+ SoftCoreForce.addPerParticleParameter('sigma')
+ SoftCoreForce.addPerParticleParameter('epsilon')
+ 
+ #Will turn off electrostatics completely in the original non-bonded force
+ #In the end-state, only want electrostatics inside the alchemical molecule
+ #To do this, just turn ON a custom force as we turn OFF electrostatics in the original force
+ ONE_4PI_EPS0 = 138.935456 #in kJ/mol nm/e^2
+ soluteCoulFunction = '(1.0-(lambdaQ^2))*ONE_4PI_EPS0*charge/r;'
+ soluteCoulFunction += 'ONE_4PI_EPS0 =&#160;%.16e;'&#160;% (ONE_4PI_EPS0)
+ soluteCoulFunction += 'charge = charge1*charge2'
+ SoluteCoulForce = mm.CustomNonbondedForce(soluteCoulFunction)
+ #Note this lambdaQ will be different than for soft core (it's also named differently, which is CRITICAL)
+ #This lambdaQ corresponds to the lambda that scales the charges to zero
+ #To turn on this custom force at the same rate, need to multiply by (1.0-lambdaQ**2), which we do
+ SoluteCoulForce.addGlobalParameter('lambdaQ', 1.0) 
+ SoluteCoulForce.addPerParticleParameter('charge') 
+ 
+ #Also create custom force for intramolecular alchemical LJ interactions
+ #Could include with electrostatics, but nice to break up
+ #We could also do this with a separate NonbondedForce object, but it would be a little more work, actually
+ soluteLJFunction = '4.0*epsilon*x*(x-1.0); x = (sigma/r)^6;'
+ soluteLJFunction += 'sigma=0.5*(sigma1+sigma2); epsilon=sqrt(epsilon1*epsilon2)'
+ SoluteLJForce = mm.CustomNonbondedForce(soluteLJFunction)
+ SoluteLJForce.addPerParticleParameter('sigma')
+ SoluteLJForce.addPerParticleParameter('epsilon')
+   
+ #Loop over all particles and add to custom forces
+ #As we go, will also collect full charges on the solute particles
+ #AND we will set up the solute-solute interaction forces
+ alchemicalCharges = <a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=0&amp;action=edit&amp;redlink=1" class="new" title="0 (page does not exist)">0</a>*len(soluteIndices)
+ for ind in range(system.getNumParticles()):
+     #Get current parameters in non-bonded force
+     [charge, sigma, epsilon] = NBForce.getParticleParameters(ind)
+     #Make sure that sigma is not set to zero! Fine for some ways of writing LJ energy, but NOT OK for soft-core!
+     if sigma/u.nanometer == 0.0:
+         newsigma = 0.3*u.nanometer #This 0.3 is what's used by GROMACS as a default value for sc-sigma
+     else:
+         newsigma = sigma
+     #Add the particle to the soft-core force (do for ALL particles)
+     SoftCoreForce.addParticle([newsigma, epsilon])
+     #Also add the particle to the solute only forces
+     SoluteCoulForce.addParticle([charge])
+     SoluteLJForce.addParticle([sigma, epsilon])
+     #If the particle is in the alchemical molecule, need to set it's LJ interactions to zero in original force
+     if ind in soluteIndices:
+         NBForce.setParticleParameters(ind, charge, sigma, epsilon*0.0)
+         #And keep track of full charge so we can scale it right by lambda
+         alchemicalCharges[soluteIndices.index(ind)] = charge
+ 
+ #Now we need to handle exceptions carefully
+ for ind in range(NBForce.getNumExceptions()):
+     [p1, p2, excCharge, excSig, excEps] = NBForce.getExceptionParameters(ind)
+     #For consistency, must add exclusions where we have exceptions for custom forces
+     SoftCoreForce.addExclusion(p1, p2)
+     SoluteCoulForce.addExclusion(p1, p2)
+     SoluteLJForce.addExclusion(p1, p2)
+ 
+ #Only compute interactions between the alchemical and other particles for the soft-core force
+ SoftCoreForce.addInteractionGroup(alchemicalParticles, chemicalParticles)
+ 
+ #And only compute alchemical/alchemical interactions for other custom forces
+ SoluteCoulForce.addInteractionGroup(alchemicalParticles, alchemicalParticles)
+ SoluteLJForce.addInteractionGroup(alchemicalParticles, alchemicalParticles)
+ 
+ #Set other soft-core parameters as needed
+ SoftCoreForce.setCutoffDistance(10.0*u.angstroms)
+ SoftCoreForce.setNonbondedMethod(mm.CustomNonbondedForce.CutoffPeriodic)
+ SoftCoreForce.setUseSwitchingFunction(True)
+ SoftCoreForce.setSwitchingDistance(9.0*u.angstroms)
+ SoftCoreForce.setUseLongRangeCorrection(True) 
+ system.addForce(SoftCoreForce)
+ 
+ #Set other parameters as needed - note that for the solute force would like to set no cutoff
+ #However, OpenMM won't allow a bunch of potentials with cutoffs then one without...
+ #So as long as the solute is smaller than the cut-off, won't have any problems!
+ SoluteCoulForce.setCutoffDistance(10.0*u.angstroms)
+ SoluteCoulForce.setNonbondedMethod(mm.CustomNonbondedForce.CutoffPeriodic)
+ SoluteCoulForce.setUseSwitchingFunction(True)
+ SoluteCoulForce.setSwitchingDistance(9.0*u.angstroms)
+ SoluteCoulForce.setUseLongRangeCorrection(False) #DON'T want long-range correction here!
+ system.addForce(SoluteCoulForce)
+ 
+ SoluteLJForce.setCutoffDistance(10.0*u.angstroms)
+ SoluteLJForce.setNonbondedMethod(mm.CustomNonbondedForce.CutoffPeriodic)
+ SoluteLJForce.setUseSwitchingFunction(True)
+ SoluteLJForce.setSwitchingDistance(9.0*u.angstroms)
+ SoluteLJForce.setUseLongRangeCorrection(True) #DO want long-range correction here
+ system.addForce(SoluteLJForce)
+</pre>
+<p></code>
+</p><p>Now we're ready to create a `simulation` object. Note that we first have to set the positions and velocities. After this, I add a step to set the constraints for the system, but this is optional. The system is then energy minimized. One additional nice feature for starting simulations is the ability to load a simulation state. This includes positions, velocities, and other information about the system, but does not enable exact restarts. Exact restarts are enabled through a checkpoint file. See the OpenMM documentation for more information about creating and using simulation states and checkpoints.
+</p><p>Note below that the simulation object has an attribute, really another object it points to, called context. It also has sytem, integrator, and platform objects associated with it, which I've already described. The context object is how we assign or access information about the system such as positions, velocities, forces, energies, or the values of global parameters. As we will see later, this is one way to query information about energies.
+</p><p><code>
+</p>
+<pre> sim = app.Simulation(top.topology, system, integrator, platform, prop)
+ 
+ sim.context.setPositions(top.positions)
+ 
+ sim.context.applyConstraints(1.0E-08) #The argument is the tolerance
+ 
+ sim.minimizeEnergy(
+                    tolerance=10.0*u.kilojoules_per_mole, #Energy threshold below which stops
+                    maxIterations=1000 #Maximum number of iterations
+                   )
+ 
+ sim.context.setVelocitiesToTemperature(temperature)
+</pre>
+<p></code>
+</p><p>To get information out about the simulation, we can use OpenMM `reporter` objects. It's easy to create custom reporters, and this is outlined in the documentation. Here, I use the NetCDF reporter that is available through ParmEd, which allows you to write trajectories in NetCDF rather than dcd or pdb format. You just add these reporter objects to the `reporters` attribute of your `simulation` object.
+</p><p><code>
+</p>
+<pre> #Set up reporter for outputing energies, volume, etc.
+ sim.reporters.append(app.StateDataReporter(
+                                            sys.stdout, #Where to write - can be stdout or file name (default .csv, I prefer .txt)
+                                            100, #Number of steps between writes
+                                            step=True, #Write step number
+                                            time=True, #Write simulation time
+                                            potentialEnergy=True, #Write potential energy
+                                            kineticEnergy=True, #Write kinetic energy
+                                            totalEnergy=True, #Write total energy
+                                            temperature=True, #Write temperature
+                                            volume=True, #Write volume
+                                            density=False, #Write density
+                                            speed=True, #Estimate of simulation speed
+                                            separator='  ' #Default is comma, but can change if want (I like spaces)
+                                             )
+                     )
+ 
+ #Set up reporter for printing coordinates (trajectory)
+ sim.reporters.append(NetCDFReporter(
+                                     'prod.nc', #File name to write trajectory to
+                                     100, #Number of steps between writes
+                                     crds=True, #Write coordinates
+                                     vels=True, #Write velocities
+                                     frcs=False #Write forces
+                                     )
+                     )
+</pre>
+<p></code>
+</p><p>Finally we can run a simulation!
+</p><p><code>
+</p>
+<pre> #Can set the starting time
+ sim.context.setTime(0.0)
+ 
+ #And run a certain number of steps
+ #Here 500 steps is 1 ps
+ sim.step(500)
+ 
+</pre>
+<p></code>
+</p>
+<pre>   #"Step"  "Time (ps)"  "Potential Energy (kJ/mole)"  "Kinetic Energy (kJ/mole)"  "Total Energy (kJ/mole)"  "Temperature (K)"  "Box Volume (nm^3)"  "Speed (ns/day)"
+   100  0.2  -58102.485836  5279.30809257  -52823.1777434  163.943729625  39.5375105191  0
+   200  0.4  -57389.5008402  6266.77667853  -51122.7241617  194.608597071  39.1777153588  12.1
+   300  0.6  -56768.6258233  6782.13709227  -49986.488731  210.612608743  39.1724001811  12.1
+   400  0.8  -56161.34541  7120.69306492  -49040.6523451  221.126132081  39.1724001811  12
+   500  1.0  -55681.5586567  7567.91460903  -48113.6440477  235.014158054  39.1724001811  11.9
+</pre>
+<p>The next thing it's nice to know how to do is to query information about forces and energies. The following block defines some useful functions for doing this. The first just provides a bunch of information about a `Force` object, while the second decomposes all `Force` objects in a system into separate groups and reports the energy associated with that object. If you want to pick energies apart more, you just create different `Force` objects with different parts zeroed out. This allows for obtaining specific terms due to electrostatic, LJ, or 1-4 energies. It should be clear how to do this from the code where I create an alchemical system above.
+</p><p>This gets into some of the finer details about how `Force` objects work in OpenMM, but will be helpful in understanding how you can go about modifying the alchemical state of the system.
+</p><p><code>
+</p>
+<pre> def getForceInfo(forceObj):
+     #For regular or custom nonbonded forces, reports a bunch of information
+     #Will add other forces as necessary
+     fname = forceObj.__class__.__name__
+     print(<i>)</i>
+     print(fname)
+     if 'NonbondedForce' in fname:
+         print("\tForce group:&#160;%i"%forceObj.getForceGroup())
+         print("\tNonbonded method: "+str(forceObj.getNonbondedMethod()))
+         print("\tNumber particles:&#160;%i"%forceObj.getNumParticles())
+         for k in range(12):
+             print("\t\tParticle&#160;%i params: "%(k)+str(forceObj.getParticleParameters(k)))
+         print("\tUses PBCs? "+str(forceObj.usesPeriodicBoundaryConditions()))
+         print("\tCutoff distance: "+str(forceObj.getCutoffDistance()))
+         print("\tUsing switching function? "+str(forceObj.getUseSwitchingFunction()))
+         if 'Custom' in fname:
+             print("\tDispersion correction? "+str(forceObj.getUseLongRangeCorrection()))
+             print("\tNumber exclusions:&#160;%i"%forceObj.getNumExclusions())
+             for l in range(forceObj.getNumExclusions()):
+                 if l &lt; 12 or l &gt; (forceObj.getNumExclusions()-12):
+                     print("\t\t"+str(forceObj.getExclusionParticles(l)))
+             print("\tEnergy function: "+str(forceObj.getEnergyFunction()))
+             print("\tNumber interaction groups:&#160;%i"%forceObj.getNumInteractionGroups())
+             print("\tNumber global params:&#160;%i"%forceObj.getNumGlobalParameters())
+             for l in range(forceObj.getNumGlobalParameters()):
+                 print("\t\tGlobal parameter: "+str(forceObj.getGlobalParameterName(l)))
+                 print("\t\tGlobal param value: "+str(forceObj.getGlobalParameterDefaultValue(l)))
+             print("\tNumber per-particle params:&#160;%i"%forceObj.getNumPerParticleParameters())
+             for l in range(forceObj.getNumPerParticleParameters()):
+                 print("\t\tParameter name: "+str(forceObj.getPerParticleParameterName(l)))
+         else:
+             print("\tDispersion correction? "+str(forceObj.getUseDispersionCorrection()))
+             print("\tNumber of exceptions:&#160;%i"%forceObj.getNumExceptions())
+             for l in range(forceObj.getNumExceptions()):
+                 if l &lt; 12 or l &gt; (forceObj.getNumExceptions()-12):
+                     print("\t\t"+str(forceObj.getExceptionParameters(l)))
+             print("\tReciprocal force group:&#160;%i"%forceObj.getReciprocalSpaceForceGroup())
+     if 'HarmonicBondForce' in fname:
+         print("\tForce group:&#160;%i"%forceObj.getForceGroup())
+         print("\tNumber bonds:&#160;%i"%forceObj.getNumBonds())
+         for l in range(forceObj.getNumBonds()):
+             if l &lt; 5 or l &gt; (forceObj.getNumBonds()-20):
+                 print("\t\t"+str(forceObj.getBondParameters(l)))
+     if 'HarmonicAngleForce' in fname:
+         print("\tForce group:&#160;%i"%forceObj.getForceGroup())
+         print("\tNumber angles:&#160;%i"%forceObj.getNumAngles())
+         for l in range(forceObj.getNumAngles()):
+             if l &lt; 5 or l &gt; (forceObj.getNumAngles()-20):
+                 print("\t\t"+str(forceObj.getAngleParameters(l)))
+     if 'TorsionForce' in fname:
+         print("\tForce group:&#160;%i"%forceObj.getForceGroup())
+         print("\tNumber torsions:&#160;%i"%forceObj.getNumTorsions())  
+         for l in range(forceObj.getNumTorsions()):
+             if l &lt; 5 or l &gt; (forceObj.getNumTorsions()-20):
+                 print("\t\t"+str(forceObj.getTorsionParameters(l)))
+     print(<i>)</i>
+ 
+ 
+ def decompEnergy(sysObj, positions, labels=None, verbose=False):
+     #Gives instantaneous energy decomposition without reporter
+     #It turns out that it's best to create a copy and its own integrator and context
+     #This seems to avoid a number of issues
+     print("\n")
+     thisSys = copy.deepcopy(sysObj)
+     groupcount = 0
+     groupDict = {}
+     for ind in range(thisSys.getNumForces()):
+         frc = thisSys.getForce(ind)
+         #getForceInfo(frc)
+         frc.setForceGroup(copy.deepcopy(groupcount))
+         thisname = frc.__class__.__name__
+         if labels is not None:
+             for aname in labels.keys():
+                 if labels[aname] == ind:
+                     thisname = aname
+         groupDict[groupcount] = thisname
+         groupcount += 1
+         try:
+             frc.setReciprocalSpaceForceGroup(groupcount)
+             groupDict[groupcount] = thisname + '_reciprocal'
+             groupcount += 1
+         except:
+             pass
+         if verbose:
+             getForceInfo(frc)
+ 
+     thisIntegrator = mm.VerletIntegrator(1.0*u.femtoseconds)
+     thisContext = mm.Context(thisSys, thisIntegrator)
+     thisContext.setPositions(positions)
+ 
+     print("Potential energy:&#160;%s"%(str(thisContext.getState(getEnergy=True).getPotentialEnergy())))
+     for i in range(groupcount):
+         thisenergy = thisContext.getState(getEnergy=True, groups=2**i).getPotentialEnergy()
+         print("%s (group&#160;%i):&#160;%s"%(groupDict[i], i, str(thisenergy)))
+     print("\n")
+ 
+     del thisContext, thisIntegrator
+ 
+</pre>
+<p></code>
+</p><p>Let's just see what the `Force` objects and energies look like right now, then try modifying some of our parameters and re-examining the energies.
+</p><p>So here's the full, original decomposition:
+</p><p><code>
+</p>
+<pre> #First, let's recover the final positions in the system
+ #Remember, the way the above functions find energies requires a system object and positions, NOT a context
+ #It turns out this works a lot better (not 100% sure of the reason why, but something to do with pass by reference, etc.)
+ #(also, it seems that repeatedly re-defining groups for forces leads to some strange, inconsistent behavior, so we avoid this)
+ currPos = sim.context.getState(getPositions=True).getPositions()
+ decompEnergy(system, currPos, verbose=True)
+ 
+ #Not sure why this potential energy is different than the one at the end of the simulation...
+ #I think it probably has to do with the way the context is set-up within decompEnergy.
+ #Either way would be nice to figure out
+</pre>
+<p></code>
+</p><p><br />    
+</p><p><br />    
+</p>
+<pre>   HarmonicBondForce
+   	Force group: 0
+   	Number bonds: 2
+   		[0, 1, Quantity(value=0.1535, unit=nanometer), Quantity(value=253629.99999999997, unit=kilojoule/(nanometer**2*mole))]
+   		[1, 2, Quantity(value=0.14260000000000003, unit=nanometer), Quantity(value=262839.99999999994, unit=kilojoule/(nanometer**2*mole))]
+   
+   
+   HarmonicAngleForce
+   	Force group: 1
+   	Number angles: 1301
+   		[0, 1, 2, Quantity(value=1.909913800457395, unit=radian), Quantity(value=566.68, unit=kilojoule/(mole*radian**2))]
+   		[0, 1, 6, Quantity(value=1.9210839076701585, unit=radian), Quantity(value=387.94, unit=kilojoule/(mole*radian**2))]
+   		[0, 1, 7, Quantity(value=1.9210839076701585, unit=radian), Quantity(value=387.94, unit=kilojoule/(mole*radian**2))]
+   		[1, 0, 3, Quantity(value=1.9207348418197596, unit=radian), Quantity(value=388.02, unit=kilojoule/(mole*radian**2))]
+   		[1, 0, 4, Quantity(value=1.9207348418197596, unit=radian), Quantity(value=388.02, unit=kilojoule/(mole*radian**2))]
+   		[3817, 3816, 3818, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3820, 3819, 3821, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3823, 3822, 3824, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3826, 3825, 3827, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3829, 3828, 3830, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3832, 3831, 3833, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3835, 3834, 3836, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3838, 3837, 3839, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3841, 3840, 3842, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3844, 3843, 3845, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3847, 3846, 3848, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3850, 3849, 3851, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3853, 3852, 3854, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3856, 3855, 3857, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3859, 3858, 3860, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3862, 3861, 3863, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3865, 3864, 3866, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3868, 3867, 3869, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3871, 3870, 3872, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   
+   
+   PeriodicTorsionForce
+   	Force group: 2
+   	Number torsions: 16
+   		[0, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.66944, unit=kilojoule/mole)]
+   		[0, 1, 2, 8, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[3, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[3, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[3, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[4, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[4, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[4, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[4, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[5, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[5, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[5, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[5, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[6, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.69733, unit=kilojoule/mole)]
+   		[7, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.69733, unit=kilojoule/mole)]
+   
+   
+   NonbondedForce
+   	Force group: 3
+   	Nonbonded method: 4
+   	Number particles: 3873
+   		Particle 0 params: [Quantity(value=-0.0968, unit=elementary charge), Quantity(value=0.3399670000000001, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 1 params: [Quantity(value=0.1297, unit=elementary charge), Quantity(value=0.3399670000000001, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 2 params: [Quantity(value=-0.599401, unit=elementary charge), Quantity(value=0.306647, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 3 params: [Quantity(value=0.0448, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 4 params: [Quantity(value=0.0448, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 5 params: [Quantity(value=0.0448, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 6 params: [Quantity(value=0.0171, unit=elementary charge), Quantity(value=0.247135, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 7 params: [Quantity(value=0.0171, unit=elementary charge), Quantity(value=0.247135, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 8 params: [Quantity(value=0.3979, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 9 params: [Quantity(value=-0.834, unit=elementary charge), Quantity(value=0.31506100000000004, unit=nanometer), Quantity(value=0.636386, unit=kilojoule/mole)]
+   		Particle 10 params: [Quantity(value=0.417, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 11 params: [Quantity(value=0.417, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number of exceptions: 3897
+   		[1, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[2, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[6, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[4, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[5, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[2, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[8, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[6, 2, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 2, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[3, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[3, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[4, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[4, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[4, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[5, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[5, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[5, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[6, 8, Quantity(value=0.0056698481969999995, unit=elementary charge**2), Quantity(value=0.1235675, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 8, Quantity(value=0.0056698481969999995, unit=elementary charge**2), Quantity(value=0.1235675, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   	Reciprocal force group: 4
+   
+   
+   CMMotionRemover
+   
+   
+   MonteCarloBarostat
+   
+   
+   CustomNonbondedForce
+   	Force group: 7
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (0.3399670000000001, 0.45773)
+   		Particle 1 params: (0.3399670000000001, 0.45773)
+   		Particle 2 params: (0.306647, 0.880314)
+   		Particle 3 params: (0.26495299999999994, 0.0656888)
+   		Particle 4 params: (0.26495299999999994, 0.0656888)
+   		Particle 5 params: (0.26495299999999994, 0.0656888)
+   		Particle 6 params: (0.247135, 0.0656888)
+   		Particle 7 params: (0.247135, 0.0656888)
+   		Particle 8 params: (0.3, 0.0)
+   		Particle 9 params: (0.31506100000000004, 0.636386)
+   		Particle 10 params: (0.3, 0.0)
+   		Particle 11 params: (0.3, 0.0)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: 4.0*lambdaLJ*epsilon*x*(x-1.0); x = (1.0/reff_sterics);reff_sterics = (0.5*(1.0-lambdaLJ) + ((r/sigma)^6));sigma=0.5*(sigma1+sigma2); epsilon = sqrt(epsilon1*epsilon2)
+   	Number interaction groups: 1
+   	Number global params: 1
+   		Global parameter: lambdaLJ
+   		Global param value: 1.0
+   	Number per-particle params: 2
+   		Parameter name: sigma
+   		Parameter name: epsilon
+   
+   
+   CustomNonbondedForce
+   	Force group: 8
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (-0.0968,)
+   		Particle 1 params: (0.1297,)
+   		Particle 2 params: (-0.599401,)
+   		Particle 3 params: (0.0448,)
+   		Particle 4 params: (0.0448,)
+   		Particle 5 params: (0.0448,)
+   		Particle 6 params: (0.0171,)
+   		Particle 7 params: (0.0171,)
+   		Particle 8 params: (0.3979,)
+   		Particle 9 params: (-0.834,)
+   		Particle 10 params: (0.417,)
+   		Particle 11 params: (0.417,)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? False
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: (1.0-(lambdaQ^2))*ONE_4PI_EPS0*charge/r;ONE_4PI_EPS0 = 1.3893545599999999e+02;charge = charge1*charge2
+   	Number interaction groups: 1
+   	Number global params: 1
+   		Global parameter: lambdaQ
+   		Global param value: 1.0
+   	Number per-particle params: 1
+   		Parameter name: charge
+   
+   
+   CustomNonbondedForce
+   	Force group: 9
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (0.3399670000000001, 0.45773)
+   		Particle 1 params: (0.3399670000000001, 0.45773)
+   		Particle 2 params: (0.306647, 0.880314)
+   		Particle 3 params: (0.26495299999999994, 0.0656888)
+   		Particle 4 params: (0.26495299999999994, 0.0656888)
+   		Particle 5 params: (0.26495299999999994, 0.0656888)
+   		Particle 6 params: (0.247135, 0.0656888)
+   		Particle 7 params: (0.247135, 0.0656888)
+   		Particle 8 params: (0.0, 0.0)
+   		Particle 9 params: (0.31506100000000004, 0.636386)
+   		Particle 10 params: (0.0, 0.0)
+   		Particle 11 params: (0.0, 0.0)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: 4.0*epsilon*x*(x-1.0); x = (sigma/r)^6;sigma=0.5*(sigma1+sigma2); epsilon=sqrt(epsilon1*epsilon2)
+   	Number interaction groups: 1
+   	Number global params: 0
+   	Number per-particle params: 2
+   		Parameter name: sigma
+   		Parameter name: epsilon
+   
+   Potential energy: -55556.003825 kJ/mol
+   HarmonicBondForce (group 0): 0.170545771718 kJ/mol
+   HarmonicAngleForce (group 1): 8.04336643219 kJ/mol
+   PeriodicTorsionForce (group 2): 6.27236700058 kJ/mol
+   NonbondedForce (group 3): 221254.782112 kJ/mol
+   NonbondedForce_reciprocal (group 4): -276812.652002 kJ/mol
+   CMMotionRemover (group 5): 0.0 kJ/mol
+   MonteCarloBarostat (group 6): 0.0 kJ/mol
+   CustomNonbondedForce (group 7): -12.6224380467 kJ/mol
+   CustomNonbondedForce (group 8): 0.0 kJ/mol
+   CustomNonbondedForce (group 9): -0.00207997118942 kJ/mol
+   
+   
+</pre>
+<p><br />
+Note in the output the values of the charges on the solute particles as well as the values of lambdaLJ and lambdaQ. To change the alchemical state of the system, we need to modify all of these, as shown below.
+</p><p><code>
+</p>
+<pre> #We can change global parameters (like lambdaLJ, and lambdaQ defined above) with the following
+ #To the context, these are just parameters, but to the force, these are "globally" accessible, i.e. controlled by the context
+ sim.context.setParameter('lambdaLJ', 0.5) 
+ sim.context.setParameter('lambdaQ', 0.0) 
+ 
+ #To change the actual parameters of the particles, it's a little more work
+ #However, this is necessary with the way we've set up the alchemical system
+ #Note that we stored the original charges on the solute somewhere so we don't lose them if we scale them to zero
+ for k, ind in enumerate(soluteIndices):
+     [charge, sigma, epsilon] = NBForce.getParticleParameters(ind)
+     NBForce.setParticleParameters(ind, alchemicalCharges[k]*0.0, sigma, epsilon)
+ NBForce.updateParametersInContext(sim.context) #This last part is really important - it updates the actualy context
+</pre>
+<p></code>
+</p><p>Now let's check the energy once more.
+</p><p><code>
+</p>
+<pre> decompEnergy(system, currPos, verbose=True)
+</pre>
+<p></code>
+</p><p><br />    
+</p><p><br />    
+</p>
+<pre>   HarmonicBondForce
+   	Force group: 0
+   	Number bonds: 2
+   		[0, 1, Quantity(value=0.1535, unit=nanometer), Quantity(value=253629.99999999997, unit=kilojoule/(nanometer**2*mole))]
+   		[1, 2, Quantity(value=0.14260000000000003, unit=nanometer), Quantity(value=262839.99999999994, unit=kilojoule/(nanometer**2*mole))]
+   
+   
+   HarmonicAngleForce
+   	Force group: 1
+   	Number angles: 1301
+   		[0, 1, 2, Quantity(value=1.909913800457395, unit=radian), Quantity(value=566.68, unit=kilojoule/(mole*radian**2))]
+   		[0, 1, 6, Quantity(value=1.9210839076701585, unit=radian), Quantity(value=387.94, unit=kilojoule/(mole*radian**2))]
+   		[0, 1, 7, Quantity(value=1.9210839076701585, unit=radian), Quantity(value=387.94, unit=kilojoule/(mole*radian**2))]
+   		[1, 0, 3, Quantity(value=1.9207348418197596, unit=radian), Quantity(value=388.02, unit=kilojoule/(mole*radian**2))]
+   		[1, 0, 4, Quantity(value=1.9207348418197596, unit=radian), Quantity(value=388.02, unit=kilojoule/(mole*radian**2))]
+   		[3817, 3816, 3818, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3820, 3819, 3821, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3823, 3822, 3824, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3826, 3825, 3827, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3829, 3828, 3830, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3832, 3831, 3833, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3835, 3834, 3836, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3838, 3837, 3839, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3841, 3840, 3842, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3844, 3843, 3845, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3847, 3846, 3848, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3850, 3849, 3851, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3853, 3852, 3854, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3856, 3855, 3857, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3859, 3858, 3860, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3862, 3861, 3863, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3865, 3864, 3866, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3868, 3867, 3869, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3871, 3870, 3872, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   
+   
+   PeriodicTorsionForce
+   	Force group: 2
+   	Number torsions: 16
+   		[0, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.66944, unit=kilojoule/mole)]
+   		[0, 1, 2, 8, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[3, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[3, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[3, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[4, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[4, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[4, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[4, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[5, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[5, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[5, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[5, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[6, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.69733, unit=kilojoule/mole)]
+   		[7, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.69733, unit=kilojoule/mole)]
+   
+   
+   NonbondedForce
+   	Force group: 3
+   	Nonbonded method: 4
+   	Number particles: 3873
+   		Particle 0 params: [Quantity(value=-0.0, unit=elementary charge), Quantity(value=0.3399670000000001, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 1 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.3399670000000001, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 2 params: [Quantity(value=-0.0, unit=elementary charge), Quantity(value=0.306647, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 3 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 4 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 5 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 6 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.247135, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 7 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.247135, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 8 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 9 params: [Quantity(value=-0.834, unit=elementary charge), Quantity(value=0.31506100000000004, unit=nanometer), Quantity(value=0.636386, unit=kilojoule/mole)]
+   		Particle 10 params: [Quantity(value=0.417, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 11 params: [Quantity(value=0.417, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number of exceptions: 3897
+   		[1, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[2, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[6, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[4, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[5, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[2, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[8, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[6, 2, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 2, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[3, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[3, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[4, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[4, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[4, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[5, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[5, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[5, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[6, 8, Quantity(value=0.0056698481969999995, unit=elementary charge**2), Quantity(value=0.1235675, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 8, Quantity(value=0.0056698481969999995, unit=elementary charge**2), Quantity(value=0.1235675, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   	Reciprocal force group: 4
+   
+   
+   CMMotionRemover
+   
+   
+   MonteCarloBarostat
+   
+   
+   CustomNonbondedForce
+   	Force group: 7
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (0.3399670000000001, 0.45773)
+   		Particle 1 params: (0.3399670000000001, 0.45773)
+   		Particle 2 params: (0.306647, 0.880314)
+   		Particle 3 params: (0.26495299999999994, 0.0656888)
+   		Particle 4 params: (0.26495299999999994, 0.0656888)
+   		Particle 5 params: (0.26495299999999994, 0.0656888)
+   		Particle 6 params: (0.247135, 0.0656888)
+   		Particle 7 params: (0.247135, 0.0656888)
+   		Particle 8 params: (0.3, 0.0)
+   		Particle 9 params: (0.31506100000000004, 0.636386)
+   		Particle 10 params: (0.3, 0.0)
+   		Particle 11 params: (0.3, 0.0)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: 4.0*lambdaLJ*epsilon*x*(x-1.0); x = (1.0/reff_sterics);reff_sterics = (0.5*(1.0-lambdaLJ) + ((r/sigma)^6));sigma=0.5*(sigma1+sigma2); epsilon = sqrt(epsilon1*epsilon2)
+   	Number interaction groups: 1
+   	Number global params: 1
+   		Global parameter: lambdaLJ
+   		Global param value: 1.0
+   	Number per-particle params: 2
+   		Parameter name: sigma
+   		Parameter name: epsilon
+   
+   
+   CustomNonbondedForce
+   	Force group: 8
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (-0.0968,)
+   		Particle 1 params: (0.1297,)
+   		Particle 2 params: (-0.599401,)
+   		Particle 3 params: (0.0448,)
+   		Particle 4 params: (0.0448,)
+   		Particle 5 params: (0.0448,)
+   		Particle 6 params: (0.0171,)
+   		Particle 7 params: (0.0171,)
+   		Particle 8 params: (0.3979,)
+   		Particle 9 params: (-0.834,)
+   		Particle 10 params: (0.417,)
+   		Particle 11 params: (0.417,)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? False
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: (1.0-(lambdaQ^2))*ONE_4PI_EPS0*charge/r;ONE_4PI_EPS0 = 1.3893545599999999e+02;charge = charge1*charge2
+   	Number interaction groups: 1
+   	Number global params: 1
+   		Global parameter: lambdaQ
+   		Global param value: 1.0
+   	Number per-particle params: 1
+   		Parameter name: charge
+   
+   
+   CustomNonbondedForce
+   	Force group: 9
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (0.3399670000000001, 0.45773)
+   		Particle 1 params: (0.3399670000000001, 0.45773)
+   		Particle 2 params: (0.306647, 0.880314)
+   		Particle 3 params: (0.26495299999999994, 0.0656888)
+   		Particle 4 params: (0.26495299999999994, 0.0656888)
+   		Particle 5 params: (0.26495299999999994, 0.0656888)
+   		Particle 6 params: (0.247135, 0.0656888)
+   		Particle 7 params: (0.247135, 0.0656888)
+   		Particle 8 params: (0.0, 0.0)
+   		Particle 9 params: (0.31506100000000004, 0.636386)
+   		Particle 10 params: (0.0, 0.0)
+   		Particle 11 params: (0.0, 0.0)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: 4.0*epsilon*x*(x-1.0); x = (sigma/r)^6;sigma=0.5*(sigma1+sigma2); epsilon=sqrt(epsilon1*epsilon2)
+   	Number interaction groups: 1
+   	Number global params: 0
+   	Number per-particle params: 2
+   		Parameter name: sigma
+   		Parameter name: epsilon
+   
+   Potential energy: -55500.6883885 kJ/mol
+   HarmonicBondForce (group 0): 0.170545771718 kJ/mol
+   HarmonicAngleForce (group 1): 8.04336643219 kJ/mol
+   PeriodicTorsionForce (group 2): 6.27236700058 kJ/mol
+   NonbondedForce (group 3): 221196.563362 kJ/mol
+   NonbondedForce_reciprocal (group 4): -276699.117495 kJ/mol
+   CMMotionRemover (group 5): 0.0 kJ/mol
+   MonteCarloBarostat (group 6): 0.0 kJ/mol
+   CustomNonbondedForce (group 7): -12.6224380467 kJ/mol
+   CustomNonbondedForce (group 8): 0.0 kJ/mol
+   CustomNonbondedForce (group 9): -0.00207997118942 kJ/mol
+   
+   
+</pre>
+<p><br />
+What happened?  The potential energy changed, but none of the `CustomNonbondedForce` objects, the one's controlled by lambdaLJ and lambdaQ, changed at all!  We don't expect the one with an energy of -0.002 to change... That's the solute intramolecular force we had and it doesn't depend on any lambda (also here, all such interactions are zero, we just have the very small long-range disperions term).
+</p><p>When we changed the parameters in the NBForce, this registered as a potential energy change, specifically in the `NonbondedForce`. Changing these parameters actually changed the `system` object, so when we called decompEnergy the potential energy changed. However, we only changed lambdaLJ and lambdaQ in the `context` object, not in the system itself. If you look above, the decompEnergy function creates a new context for evaluating the energies. If you look at the verbose output, you'll see these parameters have not changed since the last time. Currently, I have no good way of getting the full energy decomposition for a given context, but if we look at the potential energy, we'll see that it's correct compared to a system at the same state that we can perform an energy decomposition for (how to do this is shown below).
+</p><p><br />
+<code>
+</p>
+<pre> #First print the potential energy of the current context
+ print(sim.context.getState(getEnergy=True).getPotentialEnergy())
+ 
+ #Now show how to modify the parameters in the system itself, not in the context, so we can get an energy decomposition
+ #We first actually need to create a system copy because we can't (or shouldn't) modify a system once it's bound to a context object
+ systemCopy = copy.deepcopy(system)
+ for frc in systemCopy.getForces():
+     if isinstance(frc, mm.CustomNonbondedForce):
+         try:
+             if frc.getGlobalParameterName(0) == 'lambdaLJ':
+                 frc.setGlobalParameterDefaultValue(0, 0.5) #Only have one global parameter, so it's index 0
+             if frc.getGlobalParameterName(0) == 'lambdaQ':
+                 frc.setGlobalParameterDefaultValue(0, 0.0)
+         except Exception:
+             pass
+ 
+ decompEnergy(systemCopy, currPos, verbose=True)
+ 
+ integratorCopy = copy.deepcopy(integrator)
+ contextCopy = mm.Context(systemCopy, integratorCopy, platform, prop)
+ #contextCopy.setPositions(sim.context.getState(getPositions=True).getPositions())
+ #I'm not sure why, but it seems really important to setState rather than setPositions
+ #This is only SOMETIMES true - it seems to depend on if decompEnergy is called before this step or not
+ #I have no idea why, but this seems to be some weird bug
+ thisState = sim.context.getState(getPositions=True, getVelocities=False, getForces=False, getEnergy=False, 
+                                  getParameters=False, getParameterDerivatives=False, enforcePeriodicBox=False)
+ contextCopy.setState(thisState)
+       
+ print(contextCopy.getState(getEnergy=True).getPotentialEnergy())
+ 
+</pre>
+<p></code>
+</p>
+<pre>   -55605.1292536 kJ/mol
+   
+   
+   
+   HarmonicBondForce
+   	Force group: 0
+   	Number bonds: 2
+   		[0, 1, Quantity(value=0.1535, unit=nanometer), Quantity(value=253629.99999999997, unit=kilojoule/(nanometer**2*mole))]
+   		[1, 2, Quantity(value=0.14260000000000003, unit=nanometer), Quantity(value=262839.99999999994, unit=kilojoule/(nanometer**2*mole))]
+   
+   
+   HarmonicAngleForce
+   	Force group: 1
+   	Number angles: 1301
+   		[0, 1, 2, Quantity(value=1.909913800457395, unit=radian), Quantity(value=566.68, unit=kilojoule/(mole*radian**2))]
+   		[0, 1, 6, Quantity(value=1.9210839076701585, unit=radian), Quantity(value=387.94, unit=kilojoule/(mole*radian**2))]
+   		[0, 1, 7, Quantity(value=1.9210839076701585, unit=radian), Quantity(value=387.94, unit=kilojoule/(mole*radian**2))]
+   		[1, 0, 3, Quantity(value=1.9207348418197596, unit=radian), Quantity(value=388.02, unit=kilojoule/(mole*radian**2))]
+   		[1, 0, 4, Quantity(value=1.9207348418197596, unit=radian), Quantity(value=388.02, unit=kilojoule/(mole*radian**2))]
+   		[3817, 3816, 3818, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3820, 3819, 3821, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3823, 3822, 3824, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3826, 3825, 3827, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3829, 3828, 3830, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3832, 3831, 3833, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3835, 3834, 3836, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3838, 3837, 3839, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3841, 3840, 3842, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3844, 3843, 3845, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3847, 3846, 3848, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3850, 3849, 3851, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3853, 3852, 3854, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3856, 3855, 3857, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3859, 3858, 3860, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3862, 3861, 3863, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3865, 3864, 3866, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3868, 3867, 3869, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   		[3871, 3870, 3872, Quantity(value=1.8242181341844732, unit=radian), Quantity(value=628.02, unit=kilojoule/(mole*radian**2))]
+   
+   
+   PeriodicTorsionForce
+   	Force group: 2
+   	Number torsions: 16
+   		[0, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.66944, unit=kilojoule/mole)]
+   		[0, 1, 2, 8, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[3, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[3, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[3, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[4, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[4, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[4, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[4, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[5, 0, 1, 2, 0, Quantity(value=0.0, unit=radian), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[5, 0, 1, 2, 1, Quantity(value=0.0, unit=radian), Quantity(value=1.046, unit=kilojoule/mole)]
+   		[5, 0, 1, 6, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[5, 0, 1, 7, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.65084, unit=kilojoule/mole)]
+   		[6, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.69733, unit=kilojoule/mole)]
+   		[7, 1, 2, 8, 3, Quantity(value=0.0, unit=radian), Quantity(value=0.69733, unit=kilojoule/mole)]
+   
+   
+   NonbondedForce
+   	Force group: 3
+   	Nonbonded method: 4
+   	Number particles: 3873
+   		Particle 0 params: [Quantity(value=-0.0, unit=elementary charge), Quantity(value=0.3399670000000001, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 1 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.3399670000000001, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 2 params: [Quantity(value=-0.0, unit=elementary charge), Quantity(value=0.306647, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 3 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 4 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 5 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.26495299999999994, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 6 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.247135, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 7 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.247135, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 8 params: [Quantity(value=0.0, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 9 params: [Quantity(value=-0.834, unit=elementary charge), Quantity(value=0.31506100000000004, unit=nanometer), Quantity(value=0.636386, unit=kilojoule/mole)]
+   		Particle 10 params: [Quantity(value=0.417, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		Particle 11 params: [Quantity(value=0.417, unit=elementary charge), Quantity(value=0.0, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number of exceptions: 3897
+   		[1, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[2, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[6, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[4, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[5, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[2, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[8, 1, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[6, 2, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 2, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 0, Quantity(value=0.0, unit=elementary charge**2), Quantity(value=0.5, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[3, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[3, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[3, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[4, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[4, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[4, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[5, 2, Quantity(value=-0.022376742227840002, unit=elementary charge**2), Quantity(value=0.2858, unit=nanometer), Quantity(value=0.12023598700389165, unit=kilojoule/mole)]
+   		[5, 6, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[5, 7, Quantity(value=0.000638374464, unit=elementary charge**2), Quantity(value=0.256044, unit=nanometer), Quantity(value=0.0328444, unit=kilojoule/mole)]
+   		[6, 8, Quantity(value=0.0056698481969999995, unit=elementary charge**2), Quantity(value=0.1235675, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   		[7, 8, Quantity(value=0.0056698481969999995, unit=elementary charge**2), Quantity(value=0.1235675, unit=nanometer), Quantity(value=0.0, unit=kilojoule/mole)]
+   	Reciprocal force group: 4
+   
+   
+   CMMotionRemover
+   
+   
+   MonteCarloBarostat
+   
+   
+   CustomNonbondedForce
+   	Force group: 7
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (0.3399670000000001, 0.45773)
+   		Particle 1 params: (0.3399670000000001, 0.45773)
+   		Particle 2 params: (0.306647, 0.880314)
+   		Particle 3 params: (0.26495299999999994, 0.0656888)
+   		Particle 4 params: (0.26495299999999994, 0.0656888)
+   		Particle 5 params: (0.26495299999999994, 0.0656888)
+   		Particle 6 params: (0.247135, 0.0656888)
+   		Particle 7 params: (0.247135, 0.0656888)
+   		Particle 8 params: (0.3, 0.0)
+   		Particle 9 params: (0.31506100000000004, 0.636386)
+   		Particle 10 params: (0.3, 0.0)
+   		Particle 11 params: (0.3, 0.0)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: 4.0*lambdaLJ*epsilon*x*(x-1.0); x = (1.0/reff_sterics);reff_sterics = (0.5*(1.0-lambdaLJ) + ((r/sigma)^6));sigma=0.5*(sigma1+sigma2); epsilon = sqrt(epsilon1*epsilon2)
+   	Number interaction groups: 1
+   	Number global params: 1
+   		Global parameter: lambdaLJ
+   		Global param value: 0.5
+   	Number per-particle params: 2
+   		Parameter name: sigma
+   		Parameter name: epsilon
+   
+   
+   CustomNonbondedForce
+   	Force group: 8
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (-0.0968,)
+   		Particle 1 params: (0.1297,)
+   		Particle 2 params: (-0.599401,)
+   		Particle 3 params: (0.0448,)
+   		Particle 4 params: (0.0448,)
+   		Particle 5 params: (0.0448,)
+   		Particle 6 params: (0.0171,)
+   		Particle 7 params: (0.0171,)
+   		Particle 8 params: (0.3979,)
+   		Particle 9 params: (-0.834,)
+   		Particle 10 params: (0.417,)
+   		Particle 11 params: (0.417,)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? False
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: (1.0-(lambdaQ^2))*ONE_4PI_EPS0*charge/r;ONE_4PI_EPS0 = 1.3893545599999999e+02;charge = charge1*charge2
+   	Number interaction groups: 1
+   	Number global params: 1
+   		Global parameter: lambdaQ
+   		Global param value: 0.0
+   	Number per-particle params: 1
+   		Parameter name: charge
+   
+   
+   CustomNonbondedForce
+   	Force group: 9
+   	Nonbonded method: 2
+   	Number particles: 3873
+   		Particle 0 params: (0.3399670000000001, 0.45773)
+   		Particle 1 params: (0.3399670000000001, 0.45773)
+   		Particle 2 params: (0.306647, 0.880314)
+   		Particle 3 params: (0.26495299999999994, 0.0656888)
+   		Particle 4 params: (0.26495299999999994, 0.0656888)
+   		Particle 5 params: (0.26495299999999994, 0.0656888)
+   		Particle 6 params: (0.247135, 0.0656888)
+   		Particle 7 params: (0.247135, 0.0656888)
+   		Particle 8 params: (0.0, 0.0)
+   		Particle 9 params: (0.31506100000000004, 0.636386)
+   		Particle 10 params: (0.0, 0.0)
+   		Particle 11 params: (0.0, 0.0)
+   	Uses PBCs? True
+   	Cutoff distance: 1.0 nm
+   	Using switching function? True
+   	Dispersion correction? True
+   	Number exclusions: 3897
+   		[1, 0]
+   		[2, 0]
+   		[6, 0]
+   		[7, 0]
+   		[3, 1]
+   		[4, 1]
+   		[5, 1]
+   		[2, 1]
+   		[8, 1]
+   		[6, 2]
+   		[7, 2]
+   		[3, 0]
+   		[3, 2]
+   		[3, 6]
+   		[3, 7]
+   		[4, 2]
+   		[4, 6]
+   		[4, 7]
+   		[5, 2]
+   		[5, 6]
+   		[5, 7]
+   		[6, 8]
+   		[7, 8]
+   	Energy function: 4.0*epsilon*x*(x-1.0); x = (sigma/r)^6;sigma=0.5*(sigma1+sigma2); epsilon=sqrt(epsilon1*epsilon2)
+   	Number interaction groups: 1
+   	Number global params: 0
+   	Number per-particle params: 2
+   		Parameter name: sigma
+   		Parameter name: epsilon
+   
+   Potential energy: -55479.6019121 kJ/mol
+   HarmonicBondForce (group 0): 0.170545771718 kJ/mol
+   HarmonicAngleForce (group 1): 8.04336643219 kJ/mol
+   PeriodicTorsionForce (group 2): 6.27236700058 kJ/mol
+   NonbondedForce (group 3): 221196.563362 kJ/mol
+   NonbondedForce_reciprocal (group 4): -276699.117495 kJ/mol
+   CMMotionRemover (group 5): 0.0 kJ/mol
+   MonteCarloBarostat (group 6): 0.0 kJ/mol
+   CustomNonbondedForce (group 7): -14.9315829526 kJ/mol
+   CustomNonbondedForce (group 8): 23.3881111145 kJ/mol
+   CustomNonbondedForce (group 9): -0.00207997118942 kJ/mol
+   
+   
+   -55605.1295311 kJ/mol
+</pre>
+<p><br />
+So really the energy decomposition is just useful for debugging and making sure everything is running correctly before you start a simulation. If you're doing a free energy calculation, you probably want to be able to get all the potential energies at all the different alchemical states so you can use MBAR. But you don't care about the decomposition of the energies because hopefully you've already checked that all of that is working properly.
+</p><p>Below is a simple loop to get the potential energy at each value of a list of lambda states, with the potential energies output.
+</p><p><code>
+</p>
+<pre> #Define the lambda values of interest
+ qqLambdas = [1.00, 0.75, 0.50, 0.25, 0.00, 0.00, 0.00, 0.00, 0.00]
+ ljLambdas = [1.00, 1.00, 1.00, 1.00, 1.00, 0.75, 0.50, 0.25, 0.00]
+ 
+ potEnergies = np.zeros(len(qqLambdas))
+ for i in range(len(qqLambdas)):
+     lambdaCoul = qqLambdas[i]
+     lambdaVDW = ljLambdas[i]
+     sim.context.setParameter('lambdaLJ', lambdaVDW)
+     sim.context.setParameter('lambdaQ', lambdaCoul)
+     for k, ind in enumerate(soluteIndices):
+         [charge, sigma, epsilon] = NBForce.getParticleParameters(ind)
+         NBForce.setParticleParameters(ind, alchemicalCharges[k]*lambdaCoul, sigma, epsilon)
+     NBForce.updateParametersInContext(sim.context)
+     #When we set the potential energy, we have to divide by the units to return a float
+     #Or can use .value_in_unit() to get in arbitrary units, as long as they're in the units module
+     potEnergies[i] = sim.context.getState(getEnergy=True).getPotentialEnergy() / u.kilojoules_per_mole
+     #potEnergies[i] = sim.context.getState(getEnergy=True).getPotentialEnergy().value_in_unit(u.kilocalories_per_mole)
+     
+ print(potEnergies)
+</pre>
+<p></code>
+</p>
+<pre>   [-55681.55865673 -55661.87339996 -55642.18991054 -55622.50803866
+    -55602.82778051 -55608.25408389 -55605.12922308 -55598.44072608
+    -55590.18998731]
+</pre>
+<!-- 
+NewPP limit report
+CPU time usage: 0.122 seconds
+Real time usage: 0.123 seconds
+Preprocessor visited node count: 11/1000000
+Preprocessor generated node count: 16/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:1313-0!*!0!!*!*!* and timestamp 20231010173124 and revision id 1832
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;oldid=1832">http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;oldid=1832</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-userpage"><a href="./User:Thuang.html" class="new" dir="auto" title="Your user page [.]" accesskey=".">Thuang</a></li><li id="pt-mytalk"><a href="./User_talk:Thuang.html" class="new" title="Your talk page [n]" accesskey="n">Talk</a></li><li id="pt-preferences"><a href="./Special:Preferences.html" title="Your preferences">Preferences</a></li><li id="pt-watchlist"><a href="./Special:Watchlist.html" title="A list of pages you are monitoring for changes [l]" accesskey="l">Watchlist</a></li><li id="pt-mycontris"><a href="./Special:Contributions/Thuang.html" title="A list of your contributions [y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special:UserLogout&amp;returnto=OpenMM+tutorial" title="Log out">Log out</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="OpenMM_tutorial.html"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Talk:OpenMM_tutorial&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="OpenMM_tutorial.html#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="OpenMM_tutorial.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+					<li id="ca-watch" class="icon"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=watch&amp;token=1b0f96f6d24dc162a070df144f6301a4%2B%5C"  title="Add this page to your watchlist [w]" accesskey="w">Watch</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="OpenMM_tutorial.html#"></a></h3>
+	<div class="menu">
+		<ul>
+							<li id="ca-move"><a href="./Special:MovePage/OpenMM_tutorial.html"  title="Move this page [m]" accesskey="m">Move</a></li>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://zin.cnsi.ucsb.edu/wiki/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MSSGroupWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(../images/mssgroup/wikilogo.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-recentchanges"><a href="./Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-randompage"><a href="./Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+			<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="./Special:WhatLinksHere/OpenMM_tutorial.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="./Special:RecentChangesLinked/OpenMM_tutorial.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="./Special:Upload.html" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="./Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;oldid=1832" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=OpenMM_tutorial&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 15 January 2019, at 01:48.</li>
+											<li id="footer-info-viewcount">This page has been accessed 79 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:Privacy_policy" title="MSSGroupWiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:About" title="MSSGroupWiki:About">About MSSGroupWiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:General_disclaimer" title="MSSGroupWiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":357});
+}</script>
+	</body>
+</html>

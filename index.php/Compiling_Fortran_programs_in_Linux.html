@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Compiling Fortran programs in Linux - MSSGroupWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23.0" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;action=edit" />
+<link rel="edit" title="Edit" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;action=edit" />
+<link rel="shortcut icon" href="http://zin.cnsi.ucsb.edu/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://zin.cnsi.ucsb.edu/wiki/opensearch_desc.php" title="MSSGroupWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://zin.cnsi.ucsb.edu/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="MSSGroupWiki Atom feed" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.skinning.interface|mediawiki.ui.button|skins.vector.styles&amp;only=styles&amp;skin=vector&amp;*.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: wikidb:resourceloader:filter:minify-css:7:b36fd1c042133c9c9b60260f7c29b237 */</style>
+<script src="../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Compiling_Fortran_programs_in_Linux","wgTitle":"Compiling Fortran programs in Linux","wgCurRevisionId":1433,"wgRevisionId":1433,"wgArticleId":1295,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Thuang","wgUserGroups":["*","user","autoconfirmed"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Compiling_Fortran_programs_in_Linux","wgUserId":49,"wgUserEditCount":2,"wgUserRegistration":1637780965000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"preview":false,"previewDialog":false,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,
+"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"watchlisttoken":"61ed78eb5fc23f4683020f6f9dd67bba03d74db5"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"6b81ca9b6751d53826649ea2a31502d1+\\","patrolToken":false,"watchToken":"f05cf5441f578946148c3f3dfae135b2+\\"});},{},{});
+/* cache key: wikidb:resourceloader:filter:minify-js:7:1a3ef4316b698667dadcf21c3a09d6a6 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Compiling_Fortran_programs_in_Linux skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Compiling Fortran programs in Linux</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From MSSGroupWiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="Compiling_Fortran_programs_in_Linux.html#mw-navigation">navigation</a>, 					<a href="Compiling_Fortran_programs_in_Linux.html#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Basic procedure:
+</p>
+<ol>
+<li> Copy all your fortran files to their own folder in your home directory.
+</li>
+<li> Create a makefile for your program by running "makemake PROGRAM" where PROGRAM is the name of the file you want to be the executable.  Makemake will use all of the fortran files in the current folder, and create a dependency hiearchy for them (so it knows which to compile first).
+</li>
+<li> Then run "make PROGRAM" and this will compile your program.
+</li>
+</ol>
+<p>A couple of notes:
+</p>
+<ul>
+<li> When copying files to linux, you might need to convert them to unix-style line endings sometimes.  WinSCP will automatically do this for text files, if you use this.  Otherwise, you can run "dos2unix *.py *.f90" on your programs and that should do the conversion.  Otherwise, you might get bugs.
+</li>
+</ul>
+<ul>
+<li> To execute a file in the current directory, you have type "./PROGRAM" where the "./" is included.  Just a linux convention.
+</li>
+</ul>
+<ul>
+<li> All executables must have executable permissions.  To do this, "chmod u+x PROGRAM".  If you want to run python files like "./run.py" instead of "python run.py" (just a shortcut), you need to give the python files executables too.
+</li>
+</ul>
+<ul>
+<li> During compilation, watch for errors.  Sometimes the intel compiler on Windows allows some things that are not standard fortran 90, and so while it compiles on your pc, it will throw a bug on linux.  There are nearly always easy ways to fix these-- just check the fortran manual in the development studio.  Things colored green I believe are not portable.
+</li>
+</ul>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.003 seconds
+Real time usage: 0.003 seconds
+Preprocessor visited node count: 1/1000000
+Preprocessor generated node count: 4/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 1/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:1295-0!*!*!*!*!*!* and timestamp 20231010173117 and revision id 1433
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;oldid=1433">http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;oldid=1433</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-userpage"><a href="./User:Thuang.html" class="new" dir="auto" title="Your user page [.]" accesskey=".">Thuang</a></li><li id="pt-mytalk"><a href="./User_talk:Thuang.html" class="new" title="Your talk page [n]" accesskey="n">Talk</a></li><li id="pt-preferences"><a href="./Special:Preferences.html" title="Your preferences">Preferences</a></li><li id="pt-watchlist"><a href="./Special:Watchlist.html" title="A list of pages you are monitoring for changes [l]" accesskey="l">Watchlist</a></li><li id="pt-mycontris"><a href="./Special:Contributions/Thuang.html" title="A list of your contributions [y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special:UserLogout&amp;returnto=Compiling+Fortran+programs+in+Linux" title="Log out">Log out</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Compiling_Fortran_programs_in_Linux.html"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Talk:Compiling_Fortran_programs_in_Linux&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="Compiling_Fortran_programs_in_Linux.html#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Compiling_Fortran_programs_in_Linux.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+					<li id="ca-watch" class="icon"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;action=watch&amp;token=dc2fa5498f747b4633f65e81c578c9c9%2B%5C"  title="Add this page to your watchlist [w]" accesskey="w">Watch</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="Compiling_Fortran_programs_in_Linux.html#"></a></h3>
+	<div class="menu">
+		<ul>
+							<li id="ca-move"><a href="./Special:MovePage/Compiling_Fortran_programs_in_Linux.html"  title="Move this page [m]" accesskey="m">Move</a></li>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://zin.cnsi.ucsb.edu/wiki/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MSSGroupWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(../images/mssgroup/wikilogo.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-recentchanges"><a href="./Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-randompage"><a href="./Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+			<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="./Special:WhatLinksHere/Compiling_Fortran_programs_in_Linux.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="./Special:RecentChangesLinked/Compiling_Fortran_programs_in_Linux.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="./Special:Upload.html" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="./Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;oldid=1433" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Compiling_Fortran_programs_in_Linux&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 28 May 2009, at 21:51.</li>
+											<li id="footer-info-viewcount">This page has been accessed 72 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:Privacy_policy" title="MSSGroupWiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:About" title="MSSGroupWiki:About">About MSSGroupWiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:General_disclaimer" title="MSSGroupWiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":235});
+}</script>
+	</body>
+</html>

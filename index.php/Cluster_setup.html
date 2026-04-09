@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Cluster setup - MSSGroupWiki</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="generator" content="MediaWiki 1.23.0" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit" />
+<link rel="edit" title="Edit" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit" />
+<link rel="shortcut icon" href="http://zin.cnsi.ucsb.edu/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://zin.cnsi.ucsb.edu/wiki/opensearch_desc.php" title="MSSGroupWiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://zin.cnsi.ucsb.edu/wiki/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="MSSGroupWiki Atom feed" href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint,shared|mediawiki.skinning.interface|mediawiki.ui.button|skins.vector.styles&amp;only=styles&amp;skin=vector&amp;*.css" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: wikidb:resourceloader:filter:minify-css:7:b36fd1c042133c9c9b60260f7c29b237 */</style>
+<script src="../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Cluster_setup","wgTitle":"Cluster setup","wgCurRevisionId":2005,"wgRevisionId":2005,"wgArticleId":1280,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":"Thuang","wgUserGroups":["*","user","autoconfirmed"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Cluster_setup","wgUserId":49,"wgUserEditCount":2,"wgUserRegistration":1637780965000,"wgUserNewMsgRevisionId":null,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":false,"dialogs":false,"hidesig":true,"preview":false,"previewDialog":false,"publish":false}});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":1,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,
+"useeditwarning":1,"prefershttps":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"watchlisttoken":"61ed78eb5fc23f4683020f6f9dd67bba03d74db5"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"6b81ca9b6751d53826649ea2a31502d1+\\","patrolToken":false,"watchToken":"f05cf5441f578946148c3f3dfae135b2+\\"});},{},{});
+/* cache key: wikidb:resourceloader:filter:minify-js:7:1a3ef4316b698667dadcf21c3a09d6a6 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Cluster_setup skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Cluster setup</span></h1>
+						<div id="bodyContent">
+								<div id="siteSub">From MSSGroupWiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="Cluster_setup.html#mw-navigation">navigation</a>, 					<a href="Cluster_setup.html#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>The details are in this page are intended for the system administrator, and are not really required for day to day operation. If you are not in charge of system administration, you may skip everything here.
+</p><p>The instructions below assume that you have root access, which can be invoked through running "su" from the command prompt. Inquiries about the root password should be directed to M. Scott Shell. <a rel="nofollow" class="external text" href="https://www.cnsi.ucsb.edu/people/weakliem">Paul Weakliem</a> in Elings Hall has considerable experience with our group cluster and difficult / confusing admin problems should be directed to him.
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Cluster_setup.html#User_management"><span class="tocnumber">1</span> <span class="toctext">User management</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Cluster_setup.html#Adding_a_new_user"><span class="tocnumber">1.1</span> <span class="toctext">Adding a new user</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="Cluster_setup.html#Setting_up_a_wiki_account_for_new_users"><span class="tocnumber">1.2</span> <span class="toctext">Setting up a wiki account for new users</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Cluster_setup.html#Maintaining_a_test_user"><span class="tocnumber">1.3</span> <span class="toctext">Maintaining a test user</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="Cluster_setup.html#Cluster_structure"><span class="tocnumber">2</span> <span class="toctext">Cluster structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="Cluster_setup.html#Hardware"><span class="tocnumber">2.1</span> <span class="toctext">Hardware</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Cluster_setup.html#Operating_system"><span class="tocnumber">2.2</span> <span class="toctext">Operating system</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Cluster_setup.html#NFS_mount"><span class="tocnumber">2.3</span> <span class="toctext">NFS mount</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="Cluster_setup.html#Common_admin_tasks"><span class="tocnumber">3</span> <span class="toctext">Common admin tasks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="Cluster_setup.html#Monitoring_load"><span class="tocnumber">3.1</span> <span class="toctext">Monitoring load</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Cluster_setup.html#Login_script"><span class="tocnumber">3.2</span> <span class="toctext">Login script</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="Cluster_setup.html#Shutdown"><span class="tocnumber">3.3</span> <span class="toctext">Shutdown</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="Cluster_setup.html#Restart"><span class="tocnumber">3.4</span> <span class="toctext">Restart</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="Cluster_setup.html#Post-install_tasks"><span class="tocnumber">3.5</span> <span class="toctext">Post-install tasks</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="Cluster_setup.html#Installing_new_software"><span class="tocnumber">3.6</span> <span class="toctext">Installing new software</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="Cluster_setup.html#Configuring_the_firewall"><span class="tocnumber">3.7</span> <span class="toctext">Configuring the firewall</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="Cluster_setup.html#Reinstalling_compute_nodes"><span class="tocnumber">3.8</span> <span class="toctext">Reinstalling compute nodes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="Cluster_setup.html#Build_the_cluster_from_scratch"><span class="tocnumber">4</span> <span class="toctext">Build the cluster from scratch</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="Cluster_setup.html#Back_up_files_from_the_current_configuration"><span class="tocnumber">4.1</span> <span class="toctext">Back up files from the current configuration</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="Cluster_setup.html#Build_the_head_node"><span class="tocnumber">4.2</span> <span class="toctext">Build the head node</span></a>
+<ul>
+<li class="toclevel-3 tocsection-21"><a href="Cluster_setup.html#Rocks_6.2_frontend_installation"><span class="tocnumber">4.2.1</span> <span class="toctext">Rocks 6.2 frontend installation</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="Cluster_setup.html#Rocks_7.0_frontend_installation"><span class="tocnumber">4.2.2</span> <span class="toctext">Rocks 7.0 frontend installation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-23"><a href="Cluster_setup.html#Build_compute_nodes"><span class="tocnumber">4.3</span> <span class="toctext">Build compute nodes</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="Cluster_setup.html#Build_the_NAS-node_.28cellar-0-0.29"><span class="tocnumber">4.4</span> <span class="toctext">Build the NAS-node (cellar-0-0)</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="Cluster_setup.html#Mount_RAID_on_cellar"><span class="tocnumber">4.5</span> <span class="toctext">Mount RAID on cellar</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="Cluster_setup.html#Mount_through_xml_extensions"><span class="tocnumber">4.5.1</span> <span class="toctext">Mount through xml extensions</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="Cluster_setup.html#Mount_manually"><span class="tocnumber">4.5.2</span> <span class="toctext">Mount manually</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="Cluster_setup.html#Mount_RAID_on_all_nodes"><span class="tocnumber">4.6</span> <span class="toctext">Mount RAID on all nodes</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="Cluster_setup.html#Add_users"><span class="tocnumber">4.7</span> <span class="toctext">Add users</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="Cluster_setup.html#Modify_user_login_details"><span class="tocnumber">4.7.1</span> <span class="toctext">Modify user login details</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-31"><a href="Cluster_setup.html#Create_a_queue"><span class="tocnumber">4.8</span> <span class="toctext">Create a queue</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="Cluster_setup.html#RAID_array"><span class="tocnumber">5</span> <span class="toctext">RAID array</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="Cluster_setup.html#Hardware_and_configuration"><span class="tocnumber">5.1</span> <span class="toctext">Hardware and configuration</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="Cluster_setup.html#Building.2FRebuilding.2FReconfiguring_the_RAID"><span class="tocnumber">5.2</span> <span class="toctext">Building/Rebuilding/Reconfiguring the RAID</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="Cluster_setup.html#RAID_health"><span class="tocnumber">5.3</span> <span class="toctext">RAID health</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="Cluster_setup.html#Replacing_drives"><span class="tocnumber">5.4</span> <span class="toctext">Replacing drives</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-37"><a href="Cluster_setup.html#Web_server_.28i.e._this_wiki.29"><span class="tocnumber">6</span> <span class="toctext">Web server (i.e. this wiki)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-38"><a href="Cluster_setup.html#Configuring_the_wiki_permissions"><span class="tocnumber">6.1</span> <span class="toctext">Configuring the wiki permissions</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="Cluster_setup.html#Changing_a_user_password"><span class="tocnumber">6.2</span> <span class="toctext">Changing a user password</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="Cluster_setup.html#Backing_up_the_wiki"><span class="tocnumber">6.3</span> <span class="toctext">Backing up the wiki</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="Cluster_setup.html#Restoring_the_wiki_from_a_backup"><span class="tocnumber">6.4</span> <span class="toctext">Restoring the wiki from a backup</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="Cluster_setup.html#Managing_the_wiki_from_the_web"><span class="tocnumber">6.5</span> <span class="toctext">Managing the wiki from the web</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="User_management">User management</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=1" title="Edit section: User management">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Adding_a_new_user">Adding a new user</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=2" title="Edit section: Adding a new user">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li> 1) Run:
+</li>
+</ul>
+<p><code>
+</p>
+<pre>system-config-users
+</pre>
+<p></code>
+This brings up a GUI, which can then be used to add a new user. Usernames are typically in the format &lt;xy&gt; where x = first initial and y = surname (unless the user requests otherwise).
+</p>
+<ul>
+<li> 2) The GUI-default home directory for the user is the physical RAID location /export/home/&lt;username&gt;. Change this to point to the NFS mount i.e., /home/cask0/home/&lt;username&gt;.
+</li>
+</ul>
+<ul>
+<li> 3) UNSELECT the "Create private group for the user" checkbox. All users (unless otherwise required), belong to the common group called (creatively enough!) "users". Let the system select the user id automatically. User ids are usually selected in integer increments of 1.
+</li>
+</ul>
+<ul>
+<li> 4) Close the GUI and update the user database on all nodes by running:
+</li>
+</ul>
+<p><code>
+</p>
+<pre>rocks sync users
+</pre>
+<p></code>
+</p>
+<h3><span class="mw-headline" id="Setting_up_a_wiki_account_for_new_users">Setting up a wiki account for new users</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=3" title="Edit section: Setting up a wiki account for new users">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The easiest way to do this is to access the wiki through a web browser and log in as a system administrator.  There is only one system administrator, called WikiSysop.  At the wiki login page, type WikiSysop as the username and then the password found in LocalSettings.php under wgDBpassword (this file may be found on the cluster under /var/www/html/wiki).  Once logged in, navigate to "Special" pages (on the left under "Tools").  Once here, click the link to "Create account," and follow the steps there.  You only need to provide a username and password, as an email address, etc. is not required.  For convenience, it is probably a good idea to just use the same username as on the cluster.  However, the passwords for the wiki are perhaps not stored as securely as those for the user accounts on the cluster, so it is probably a good idea to use a different password for the wiki.
+</p>
+<h3><span class="mw-headline" id="Maintaining_a_test_user">Maintaining a test user</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=4" title="Edit section: Maintaining a test user">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Always maintain a dummy user profile. Right now there's one called testuser. This is useful for testing user management protocols, and also useful for logging into the cluster in case you messed up and locked yourself and others out.
+</p>
+<h2><span class="mw-headline" id="Cluster_structure">Cluster structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=5" title="Edit section: Cluster structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Hardware">Hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=6" title="Edit section: Hardware">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Shell group cluster is a 18 node cluster each with 8 cores, so that you have a total of 144 cores. Out of these, 8 cores belong to the head-node identified as "zin" (network name: zin.cnsi.ucsb.edu) that is used to log into the cluster. This is also the only node that has an access to the outside world. Compute nodes are named as "grape-x-y" where x = 0,1 y = 0 to 7 for x = 0, and y = 0 to 9 for x = 1. The remaining node is called "cellar-0-0" and is dedicated to managing all the user data kept on the RAID array. The hard-disk in cellar-0-0 has a partition where the RAID array is mounted. In the physical cluster (Elings Hall, 3rd floor), the RAID array is a 14 TB storage bay kept at the base of the cluster, right above the UPS (uninterruptible power supply) that has redundant disks, which house the data in a distributed fashion and provides fault-tolerance to disk failures. Right above the RAID array sits cellar-0-0, followed by zin. Next up are the grape-0-{0 to 7} followed by the grape-1-{0 to 9} nodes. Syrah is a standalone node with an independent operating system. It is not controlled by Rocks management software and as such is described in a separate section of the wiki.
+</p><p>The UPS was replaced in 2018. Details of the UPS can be found <a rel="nofollow" class="external text" href="https://ucsb.box.com/s/gef03tq6tm1mnuxzb2p811qdzizcda1j">here</a>.
+</p><p>The connections to the mains is explained <a rel="nofollow" class="external text" href="https://ucsb.box.com/s/gz8ircu93b9gv09737of8m9y1a48rnpw">here</a>. It is recommended to not have the mains directly connected to the RAID array, but through the UPS, since sudden power surges during emergency or planned shutdowns can corrupt data.
+</p>
+<h3><span class="mw-headline" id="Operating_system">Operating system</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=7" title="Edit section: Operating system">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The cluster runs Rocks 6.2 Sidewinder, which is a server-compatible version of CentOS. Further details can be found below.
+</p>
+<h3><span class="mw-headline" id="NFS_mount">NFS mount</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=8" title="Edit section: NFS mount">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Although the physical location for all the data is within the RAID array, it is accessed through a hard mount to /share/apps, called the Network File Storage (NFS). Similarly, user home directories are mounted to /home/cask0/home. DO NOT unmount these locations. A brief description of the folders of the NFS mount in /share/apps is given below:
+</p>
+<ul>
+<li> scripts  - all group code (python, fortran, bash, tcl)
+</li>
+</ul>
+<ul>
+<li> installation_scripts - whenever you install recent software, try to compile a list of instructions and put it in a file under this. You can dump any additional things you want into that file or folder. Files under this directory should be named as get_software.sh. Update the README if required. If a software has plugins built by the group that need to be put in at compile time, you’ll find them here.
+</li>
+</ul>
+<ul>
+<li> admin_scripts - treat all code in here with EXTREME CAUTION. Blindly executing any of these shell scripts can break your or others' work instantly. The scripts here are useful for propagating changes manually to compute nodes if they are rebooted or reinstalled. Contact M. Scott Shell if you don’t understand something in here. Bottom line: Do not run anything from here without prior confirmation. (If there is still confusion, shoot an email to tanmoy.7989@gmail.com)
+</li>
+</ul>
+<ul>
+<li> package/version - softwares that you install should go into their own folders and wherever possible try to stick to that &lt;package&gt;/&lt;version&gt; hierarchy
+</li>
+</ul>
+<ul>
+<li> modulefiles - whenever you install some new package/version, write an appropriate modulefile for the same and keep it under modulefiles/package/version. If you built only a new version of an already existing software, remember to keep it under the appropriate package location in modulefiles
+</li>
+</ul>
+<ul>
+<li> src - store any necessary software sources here. Try and make a new folder for new sources. Sources mean only zipped files or tarballs.
+</li>
+</ul>
+<h2><span class="mw-headline" id="Common_admin_tasks">Common admin tasks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=9" title="Edit section: Common admin tasks">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>All admin tasks may be resolved by consulting the <a rel="nofollow" class="external text" href="http://rocksclusters.github.io/assets/usersguides/roll-documentation/base/6.2/">Rocks User Guide</a>.  Consider the below as a quick reference, but if you're not sure about anything, read the manual.
+</p>
+<h3><span class="mw-headline" id="Monitoring_load">Monitoring load</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=10" title="Edit section: Monitoring load">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The I/O or computational load on the cluster can be monitored through the <a rel="nofollow" class="external text" href="http://zin.cnsi.ucsb.edu/ganglia">ganglia</a> tool. High usage spikes for cellar-0-0 reflect users archiving data. Whenever you see I/O is slow, this should be the first thing to check.
+</p>
+<h3><span class="mw-headline" id="Login_script">Login script</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=11" title="Edit section: Login script">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The script /share/apps/login.sh contains all path-names, environment variables and module loads that may be useful for all users all the time. 
+The important environment variables to take care of are:
+<code>
+</p>
+<pre>export APPS=/share/apps
+export PATH=$APPS/scripts:$PATH
+</pre>
+<p></code>
+Further, the default temp directory (where temporary files are created by the OS and programs during run-time, and are flushed out periodically) is /tmp which has limited space. So make sure that the default is changed to the more spacious /state/partition1/tmp:
+<code>
+</p>
+<pre>export TMPDIR=/state/partition1/tmp
+</pre>
+<p></code>
+Modules that MUST be loaded at login-time include the C/C++/Fortran compilers. For other software/libraries, decide based on how frequently they are going to be used and by how many group members.
+</p>
+<h3><span class="mw-headline" id="Shutdown">Shutdown</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=12" title="Edit section: Shutdown">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For planned shutdowns, send an email out to all users to kill / pause their jobs prior. Then (as root), run
+<code>
+</p>
+<pre>rocks run host command="shutdown -h now"
+</pre>
+<p></code>
+</p>
+<h3><span class="mw-headline" id="Restart">Restart</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=13" title="Edit section: Restart">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If the entire cluster is rebooted after shutdown, the head-node and cellar-0-0 does a simple reboot (like how your laptop works), whereas the compute nodes can be customized to do either a reboot or a "re-install". To force a re-install on a compute node (say grape-x-y), run the following <b>before</b> you shut down the cluster:
+<code>
+</p>
+<pre>rocks set host boot compute-x-y action=install
+</pre>
+<p></code>
+Don't set this action unless necessary, e.g. when the grape-x-y node was misbehaving prior to shut-down and you didn't know how to fix it. This can also be done to fix a particular compute-node if it is doing something weird that you don't know how to fix. Simply set it to re-install the OS, then shut it down and bring it back up. NEVER, EVER, EVER set this action for the head node or cellar-0-0, else you'll lose all data. When restarting the entire cluster, follow this order:
+<code>
+</p>
+<pre>zin --&gt; cellar-0-0 --&gt; grape-0 nodes --&gt; grape-1 nodes
+</pre>
+<p></code>
+Wait till zin reboots completely, then start cellar-0-0 and wait till it reboots completely. After that you can reboot all the compute nodes one after another.
+</p>
+<h3><span class="mw-headline" id="Post-install_tasks">Post-install tasks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=14" title="Edit section: Post-install tasks">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li> When a compute node is rebooted / reinstalled, it should automatically run all post-install stuff as detailed in /share/apps/admin_scripts/extend-compute.xml. ONLY IF IT DOESN'T, run /share/apps/admin_scripts/manual_postinstall/buildnodes.sh as root.
+</li>
+</ul>
+<ul>
+<li> If you reinstall cellar-0-0 (as mentioned before, DON'T), be careful with the root partition formatting, and DO NOT TOUCH /dev/sdb1 - this is the RAID. The extend-nas.xml script kept in /share/apps/admin_scripts is automatically added to the OS and should take immediate effect. ONLY IF IT DOESN'T, ssh to cellar-0-0 and run the commands in /share/apps/admin_scripts/manual_postinstall/hardmount.sh. Run the bash commands in this scripts one by one, NEVER at one go.
+</li>
+</ul>
+<ul>
+<li> When the head-node is rebooted after a shutdown, there is a bug in the Rocks OS that may sometimes prevent the <a rel="nofollow" class="external text" href="http://zin.cnsi.ucsb.edu/ganglia">ganglia</a> tool to recognize the compute nodes and the ganglia webpage will show the head-node as the only node on the cluster. In this case, run /share/apps/admin_scripts/fixganglia.sh as root.
+</li>
+</ul>
+<ul>
+<li> If for some reason you need to <b>reinstall</b> (not reboot) the head-node (again, DON'T), run the following scripts in the order given:
+</li>
+</ul>
+<p><code>
+</p>
+<pre>bash /share/apps/admin_scripts/manual_postinstall/buildzin.sh
+bash /share/apps/admin_scripts/manual_postinstall/buildnodes.sh
+bash /share/apps/admin_scripts/fixganglia.sh
+</pre>
+<p></code>
+Look at what the commands in buildzin.sh do; chances are you might not need to run all or most of them. More details on the Rocks specific commands in these scripts can be found on the online <a rel="nofollow" class="external text" href="http://rocksclusters.github.io/assets/usersguides/roll-documentation/base/6.2/">Rocks User Guide</a>.
+</p>
+<h3><span class="mw-headline" id="Installing_new_software">Installing new software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=15" title="Edit section: Installing new software">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Sometimes common Linux packages such as libraries, etc that need installation can be already present as RPMs in the Rocks OS. In those cases search the Rocks rpm repository using:
+<code>
+</p>
+<pre>rpm -qip &lt;package&gt;.rpm
+</pre>
+<p></code>
+Or via yum:
+<code>
+</p>
+<pre>yum list &lt;package&gt;
+</pre>
+<p></code>
+If this gives any output, then the RPM is probably present already and all you need to do is:
+<code>
+</p>
+<pre>rpm -i &lt;package&gt;
+</pre>
+<p></code>
+One can also use yum to perform the installation if the RPM is available via:
+<code>
+</p>
+<pre>yum install &lt;package&gt;
+</pre>
+<p></code>
+If the RPM is not already available, you can download the appropriate RPM and place it in <code>/export/rocks/install/contrib/6.2/x86_64/RPMS</code> as described in the <a rel="nofollow" class="external text" href="http://www.rocksclusters.org/assets/usersguides/roll-documentation/base/6.2/customization-adding-packages.html">Rocks User Guide section 5.1</a>. To make the package available (to any node), you just have to then run
+<code>
+</p>
+<pre>cd /export/rocks/install
+rocks create distro
+</pre>
+<p></code>
+To then install the package on a specific host (i.e. grape-0-0, cellar-0-0, frontend, etc.) you can run
+<code>
+</p>
+<pre>rocks run host &lt;hostname&gt; "yum clean all; yum -y install &lt;package&gt;"
+</pre>
+<p></code>
+From the user guide, you should be able to figure out a variant of this command in order to install on all compute nodes, etc. Note that you DO NOT have to add the package to the <code>extend_compute.xml</code> or <code>extend_nas.xml</code> files in <code>/export/rocks/install/site-profiles/6.2/nodes</code>. You only need to do this if you want that package to automatically be installed when the node is re-installed, which is probably a good idea, but your call. However, this also means that you can install packages on individual nodes without having to set them to be re-installed and re-boot them. This is a very nice feature when working with cellar, which is a NAS appliance node, where re-installing the node is risky.
+</p><p>For the purposes of record keeping, challenges faced when installing GCC 7.0 and LAMMPS are outlined below:
+</p>
+<ul>
+<li> <b>GCC</b> - Rocks 6.2+ comes with a HPC roll which must be installed to automatically get Sun Grid Engine. It also gives a openmpi. Great, right&#160;? Well no, because the gcc version that comes with CentOS is old but needs to be kept for compatibility purposes. That means you need to start installing new software <b>after</b> installing gcc. Please install all other software with <b>this</b> C compiler. Just run module load gcc/gcc-&lt;version&gt; before starting any other install. An advisable flowchart is 
+</li>
+</ul>
+<p>gcc (comes with g++, gfortran)  → anaconda python → pip → mpi→ fftw→ BLAS→ LAPACK→ Lammps  → Gromacs → Amber→ packmol→ pymbar→ others
+Optional: intel parallel studio (free version, NOT INSTALLED currently). If you do this, you will have to go back and install separate versions of mpi compiled with the intel compiler as well as all softwares that use mpi. Remember to create separate module files in each case. It is easy to run into a large number of permutations, so think carefully what compiler-mpi-software combo you need and only install those.
+</p>
+<ul>
+<li> <b>LAMMPS</b> - Making LAMMPS may be slightly non-standard on the cluster, since the Makefile needs the location of fftw libraries (among other things), which you need to specify. Currently an example makefile is kept in /share/apps/lammps/lammps-15May15/src/MAKE/Makefile.mpich2. Follow this when installing other versions in future. The fftw library is presently located in /share/apps/fftw which is why "include" and "lib" folders under this fftw location must be supplied to the FFT_INC and FFT_PATH locations in the Makefile. These locations would obviously change if the fftw libraries were located differently. Leaving these fields empty in the Makefile will force LAMMPS to install its own KISS fft library which is relatively much slower.
+</li>
+</ul>
+<p>Finally, as a general set of guidelines:
+</p>
+<ul>
+<li> Keep all software sources (wherever possible) in /share/apps/src. (delete all untarred or unzipped stuff from here)
+</li>
+<li> If you can, write down the bash commands for the installations into a single script, with appropriate documentation and place it in /share/apps/installation_scripts
+</li>
+<li> If multiple versions of this software exist on the cluster already, PLEASE create a modulefile under /share/apps/modulefiles/. Modulefiles follow a c-shell (as opposed to the bash shell) format; look at the other modulefiles in this directory to understand how to write one. If (and only if, discuss with M. Scott Shell first) the version of the software you installed can be used system-wide, go ahead and put a line: module load &lt;modulefilename without path&gt; in /share/apps/login.sh.
+</li>
+</ul>
+<h3><span class="mw-headline" id="Configuring_the_firewall">Configuring the firewall</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=16" title="Edit section: Configuring the firewall">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The default rocks firewall should mostly be fine.  To additionally only allow ssh access from on-campus or from VPN connections to the campus network, use the following commands
+</p>
+<pre><code>rocks remove firewall global rulename=A20-SSH-PUBLIC
+
+rocks add firewall global network=public protocol=tcp \
+service=ssh chain=INPUT action=ACCEPT \
+flags="-m state --state NEW --source 128.111.0.0/255.255.0.0" \
+rulename=A20-SSH-PUBLIC
+
+rocks add firewall global network=public protocol=tcp \
+service=ssh chain=INPUT action=ACCEPT \
+flags="-m state --state NEW --source 169.231.0.0/255.255.0.0" \
+rulename=A20-SSH-PUBLIC-VPN
+
+rocks add firewall host=localhost network=public protocol=tcp \
+service=www chain=INPUT action=ACCEPT \
+flags="-m state --state NEW --source 128.111.0.0/255.255.0.0" \
+rulename=A40-WWW-PUBLIC-NEW 
+
+rocks add firewall host=localhost network=public protocol=tcp \
+service=www chain=INPUT action=ACCEPT \
+flags="-m state --state NEW --source 169.231.0.0/255.255.0.0" \
+rulename=A40-WWW-PUBLIC-NEW-VPN
+
+rocks sync host firewall localhost</code>
+</pre>
+<p>Note that this only configures the firewall for the frontend, even though the global firewall is changed, which applies to all nodes.  However, since only the frontend (localhost) is connected to the public network through eth1, the other nodes will just ignore this command.  They will get updated when the nodes are restarted, but it won’t really matter.  The last two commands allow zin.cnsi.ucsb.edu to be accessed from a web-browser as long as you are on campus or connected via a VPN.  Additionally, they magically cause the cluster wiki and ganglia to start working as well, which I guess makes sense because you access both these tools by going through zin.cnsi.ucsb.edu or zin.cnsi.ucsb.edu/wiki.
+</p><p>In order to allow access to specific IP addresses (note: this is only relevant if the individual needing access cannot obtain a UCSB netID, so an unusual case), run a similar command, replacing IPADDRESS with the IP address and RULENAME with a label
+</p><p><code>
+</p>
+<pre>rocks add firewall global network=public protocol=tcp \
+service=ssh chain=INPUT action=ACCEPT \
+flags="-m state --state NEW --source IPADDRESS" \
+rulename=RULENAME
+rocks sync host firewall localhost
+</pre>
+<p></code>
+</p><p>To remove the rule, run
+</p><p><code>
+</p>
+<pre>rocks remove firewall global rulename=RULENAME
+</pre>
+<p></code>
+</p>
+<h3><span class="mw-headline" id="Reinstalling_compute_nodes">Reinstalling compute nodes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=17" title="Edit section: Reinstalling compute nodes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>If a compute node is behaving strangely, try first forcing a re-install by running
+</p><p><code>
+</p>
+<pre>rocks set host boot grape-x-y action=install
+</pre>
+<p></code>
+</p><p>(Note: do NOT set this action for the head node or cellar.)
+</p><p>If that does not work (e.g. there is a filesystem error in /state/partition1, which is preserved over reinstallations), then you can try removing the node from the cluster and adding it back. To do this, shut down the node and run
+</p><p><code>
+</p>
+<pre>rocks remove host grape-x-y
+insert-ethers --hostname=grape-x-y --cabinet=x --rank=y
+</pre>
+<p></code>
+</p><p>After running the last command, select Compute and then turn on the node. Enable a PXE boot on that node (F12). Wait until you see an asterisk (*) within the parentheses (as described in the <a rel="nofollow" class="external text" href="http://www.rocksclusters.org/assets/usersguides/roll-documentation/base/6.2/install-compute-nodes.html">Rocks User Guide section 3.3</a>), indicating that the compute node has successfully requested a kickstart file from the frontend. Now, quit insert-ethers with F8 (this may not be necessary if you used the hostname option with insert-ethers). This will perform a full reinstall of the compute node. You will likely have to wait about an hour for the compute node to show up on the queue.
+</p>
+<h2><span class="mw-headline" id="Build_the_cluster_from_scratch">Build the cluster from scratch</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=18" title="Edit section: Build the cluster from scratch">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>Authors: Tanmoy Sanyal, Jacob I. Monroe, Sally Jiao</b>
+</p><p>The cluster runs Rocks 7.0 (Manzanita) which is a server-compatible version of CentOS 7.4. This page describes the steps involved in upgrading the cluster from one Rocks version to another, based on experiences upgrading from Rocks 4.3 to 6.2 in 2017 and from Rocks 6.2 to 7.0 in 2023. The steps outlined here assume that the RAID is not being reconfigured. If you are also doing this, see <a href="Cluster_setup.html#Building.2FRebuilding.2FReconfiguring_the_RAID" title="Cluster setup">Building/Rebuilding/Reconfiguring the RAID</a> and simply add in those steps after installing the NAS node, but before mounting the RAID.
+</p><p>Some helpful resources are the Rocks documentation (<a rel="nofollow" class="external text" href="http://central-7-0-x86-64.rocksclusters.org/roll-documentation/base/7.0/">here for 7.0</a>), <a rel="nofollow" class="external text" href="https://marc.info/?l=npaci-rocks-discussion&amp;r=1&amp;w=2">the NPACI Rocks mailing list</a>, Rocks Clusters forum on <a rel="nofollow" class="external text" href="https://groups.google.com/g/rocks-clusters">Google Groups</a>, and <a rel="nofollow" class="external text" href="https://github.com/rocksclusters/wiki/wiki">the wiki page on the rocksclusters github</a>. A step-by-step installation of Rocks 5.3 can be found <a rel="nofollow" class="external text" href="https://twiki.cern.ch/twiki/bin/view/Main/AtlasTier3ROCKS">here</a>.
+</p>
+<h3><span class="mw-headline" id="Back_up_files_from_the_current_configuration">Back up files from the current configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=19" title="Edit section: Back up files from the current configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Usually the best thing to do is to create a restore roll. For an overview of how to create and use a restore roll, check out the documentation <a rel="nofollow" class="external text" href="http://central-7-0-x86-64.rocksclusters.org/roll-documentation/base/7.0/upgrade-frontend.html">here</a>. For more (necessary) details, check out <a rel="nofollow" class="external text" href="https://github.com/rocksclusters/wiki/wiki/tips-and-tricks#Q_What_files_should_survive_a_frontend_reinstallupgrade">this page</a>.
+</p><p>We did not use a restore roll during either of the upgrades. In 2017, there were "weird errors" when attempting to create it. In 2023, it was created but ultimately not used (using it after installing the compute nodes resulted in strange errors).
+</p><p>Instead, we backed up the following:
+</p>
+<ul>
+<li> Screenshot of the window with user names and ID numbers that pops up when you run <code>system-config-users</code>. The ID numbers are supremely important for restoring data later on.
+</li>
+</ul>
+<ul>
+<li> User data in <code>/home/cask0/home</code>
+</li>
+</ul>
+<ul>
+<li> Everything in <code>/share/apps/admin_scripts</code>
+</li>
+</ul>
+<ul>
+<li> Everything in <code>/share/apps/installation_scripts</code>
+</li>
+</ul>
+<ul>
+<li> <code>/share/apps/login.sh</code>
+</li>
+</ul>
+<ul>
+<li> <code>/etc/profile</code>
+</li>
+</ul>
+<ul>
+<li> <code>/etc/bashrc</code>
+</li>
+</ul>
+<ul>
+<li> <code>/etc/vimrc</code>
+</li>
+</ul>
+<ul>
+<li> <code>/etc/hosts</code>
+</li>
+</ul>
+<ul>
+<li> <code>/etc/hosts.local</code>
+</li>
+</ul>
+<ul>
+<li> <code>/etc/httpd/conf/httpd.conf</code>
+</li>
+</ul>
+<ul>
+<li> <code>/var/www/html/wiki/LocalSettings.php</code>
+</li>
+</ul>
+<p>To be safe, it is also a good idea to make tarballs of <code>/share/apps</code>, <code>/etc</code>, <code>/var</code> and the wiki. Backing up the wiki is described <a href="Cluster_setup.html#Backing_up_the_wiki" title="Cluster setup"> here</a>.
+</p><p>Also, make a test user account (or, make sure there is an existing test user account with a few files) to test user creation and file ownership in the new configuration.
+</p>
+<h3><span class="mw-headline" id="Build_the_head_node">Build the head node</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=20" title="Edit section: Build the head node">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>These steps differ significantly between the Rocks 6.2 and Rocks 7.0 install. 
+</p>
+<h4><span class="mw-headline" id="Rocks_6.2_frontend_installation">Rocks 6.2 frontend installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=21" title="Edit section: Rocks 6.2 frontend installation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>1) Grab jumbo dvd 1 + os rolls 2 through 10 from <a rel="nofollow" class="external text" href="http://www.rocksclusters.org/downloads/2015-05-11-download-rocks-6-2-sidewinder.html">this link</a>
+</p><p>2) Select these rolls to install:
+</p>
+<ul>
+<li> From jumbo dvd: Kernel, base, OS roll 1, Area51, Ganglia, HPC, Web-server, SGE, perl, python, perfSONAR
+</li>
+<li> From separate OS roll disks: os roll disk 2 - 10. You can also try to do a network install, which didn’t work for us. For a network install, you only need the kernel roll on disk that you can pull from the link above. For all other rolls, just supply the address of the roll server as <a rel="nofollow" class="external free" href="http://central-6-2-x86-64.rocksclusters.org/install/rolls/">http://central-6-2-x86-64.rocksclusters.org/install/rolls/</a>
+</li>
+</ul>
+<p>3) Install head node using step by step instructions from <a rel="nofollow" class="external text" href="http://www.rocksclusters.org/assets/usersguides/roll-documentation/base/6.2/install-frontend.html">here</a>. The required fields needed for following above steps are:
+</p>
+<ul>
+<li> eth1 → everything public, eth0→ everything private
+</li>
+<li> Public IP address = 128.111.174.84
+</li>
+<li> Public Gateway = 128.111.174.81
+</li>
+<li> Public DNS = 128.111.11.2,128.111.11.1 (write in csv format, no blanks before or after comma)
+</li>
+<li> Public subnet = 128.111.174.80
+</li>
+<li> Public netmask = 255.255.255.248
+</li>
+<li> Private IP address = 10.1.1.1
+</li>
+<li> Private subnet = 10.0.0.0
+</li>
+<li> Private netmask = 255.0.0.0
+</li>
+<li> FQDN (Fully qualified domain name)  = zin.cnsi.ucsb.edu
+</li>
+<li> Name of cluster = MSS Group Cluster
+</li>
+<li> URL → leave blank
+</li>
+<li> Root password → Talk to M. Scott Shell
+</li>
+<li> Time Zone = America/Los Angeles
+</li>
+<li> NTP server = pool.ntp.org
+</li>
+<li> Disk partitioning: Auto
+</li>
+<li>Lat, Long:  N34.4156, W119.8403 
+</li>
+</ul>
+<p>Insert roll CDs one by one again, as prompted. When the last roll has been read in, installation begins, following which head node reboots
+</p>
+<h4><span class="mw-headline" id="Rocks_7.0_frontend_installation">Rocks 7.0 frontend installation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=22" title="Edit section: Rocks 7.0 frontend installation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Create a bootable USB with the kernel roll (found <a rel="nofollow" class="external text" href="http://www.rocksclusters.org/downloads/2017-12-01-download-rocks-7-0-manzanita.html">here</a>) by running <code>sudo dd bs=4M if=/path/to/kernel-7.0-0.x86-64.disk1.iso of=/path/to/usb status=progress oflag=sync</code>. Boot the head node from the USB and follow the instructions <a rel="nofollow" class="external text" href="http://central-7-0-x86-64.rocksclusters.org/roll-documentation/base/7.0/install-frontend-7.html">here</a>. The main steps are briefly listed below and deviations from these steps are noted.
+</p><p>1) Configure the public network. Change the host name to zin.cnsi.ucsb.edu. The network interfaces are enp5s0 and enp9s0 and not eth0 and eth1. When configuring the IPv4 address, the entries are
+</p>
+<ul>
+<li>Address: 128.111.174.84
+</li>
+<li>Netmask: 255.255.255.248
+</li>
+<li>Gateway: 128.111.174.81
+</li>
+<li>DNS servers: 128.111.1.2,128.111.1.1
+</li>
+</ul>
+<p>2) Configure the local network with the following settings:
+</p>
+<ul>
+<li>IPv4 Address: 10.1.1.1
+</li>
+<li>IPv4 Netmask: 255.0.0.0
+</li>
+</ul>
+<p>3) Select the rolls to be installed. For some reason, the default roll server (<a rel="nofollow" class="external free" href="http://central-7-0-x86-64.rocksclusters.org/install/rolls/">http://central-7-0-x86-64.rocksclusters.org/install/rolls/</a>) did not work (no rolls were found by the installer); this could have been a DNS issue that we fixed later. Instead, I created a server on an office desktop using the scripts provided <a rel="nofollow" class="external text" href="https://github.com/rocksclusters/roll-server">here</a> (note: in contrast to the documentation, I had to copy <code>index.cgi</code> into every subfolder for the installation to be successful). 
+</p><p>4) Change the time zone to America/Los Angeles.
+</p><p>5) Configure the cluster with the following settings:
+</p>
+<ul>
+<li>Cluster Name: MSS Group Cluster
+</li>
+<li>Contact: shell@ucsb.edu
+</li>
+<li>Project URL: &lt;left this blank&gt;
+</li>
+<li>Latitude/Longitude: N34.4156, W119.8403 
+</li>
+<li>Certificate Organization: UCSB
+</li>
+<li>Certificate Locality: Santa Barbara
+</li>
+<li>Certificate State: California
+</li>
+<li>Certificate Country: US (note: there may be errors if this is not a 2-letter country code)
+</li>
+<li>NTP Servers: pool.ntp.org
+</li>
+</ul>
+<p>6) Configure partitioning. Delete all the current partitions and add the following new partitions (ext4):
+</p>
+<ul>
+<li>Mount point: /, size: 16 GB (sda1)
+</li>
+<li>Mount point: /var, size: 4 GB (sda2)
+</li>
+<li>Mount point: swap, size: 1 GB (sda3)
+</li>
+<li>Mount point: /state/partition1, size: everything else (sda4/5)
+</li>
+</ul>
+<h3><span class="mw-headline" id="Build_compute_nodes">Build compute nodes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=23" title="Edit section: Build compute nodes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1) Open a terminal on the head node and run:
+<code>
+</p>
+<pre>insert-ethers
+</pre>
+<p></code>
+</p><p>Choose appliance type as “Ethernet Switches” and wait until it catches the signal from the network switch. (Note: The network switch should be turned on.) This can take anywhere between 1 to 10 mins. Once the network switch is identified it gets registered with name <code>network-0-0</code>. Now, quit <code>insert-ethers</code> using F8.
+</p><p>2) Now type:
+<code>
+</p>
+<pre>insert-ethers --basename=grape
+</pre>
+<p></code>
+</p><p>and switch on the compute nodes starting from the bottom to the top of the bottom rack. Do not turn them on randomly; follow bottom-to-top order and wait for each node to catch the signal from the network switch. Note that you may need to run <code>service httpd start</code> and wait a minute or so before the <code>insert-ethers</code> command works. You also may need to enable PXE boot on the compute nodes (hit F12 after rebooting). You can monitor the installation using:
+<code>
+</p>
+<pre>rocks-console &lt;compute-node-name&gt;
+</pre>
+<p></code>
+</p><p>where name = grape-0-{0-7} or grape-1-{0-9}. 
+</p><p>For the some of the nodes, Rocks 7.0 may request that the disks be manually partitioned (similar to the head node). Follow the same partitioning as for the head node.
+</p><p>Once all bottom rack (grape-0) nodes have been installed and rebooted to show the login prompt, quit insert-ethers using F8.
+</p><p>3) Type
+<code>
+</p>
+<pre>insert-ethers --basename=grape --cabinet=1
+</pre>
+<p></code>
+</p><p>and switch on the top rack nodes, strictly in the order of bottom to top, one by one. Again, monitor Rocks installation on each of them and wait till all of them rebooted to a login prompt. After that, quit insert-ethers using F8.
+</p><p>At this point, you will be able to <code>ssh</code> back and forth between the head and compute nodes. However, according to Rocks’ default policy, all the compute nodes have a random root password and so you will not be able to login as root from the compute node terminal. To have root privileges on a compute node, login as root to the head node and <code>ssh</code> to the compute node.
+</p>
+<h3><span class="mw-headline" id="Build_the_NAS-node_.28cellar-0-0.29">Build the NAS-node (cellar-0-0)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=24" title="Edit section: Build the NAS-node (cellar-0-0)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Be careful when handling cellar, as it is easy to accidentally erase data in the RAID array from here. Use the <code>testuser</code> account to play with and identify any potential data loss. (Also discussed <a href="Cluster_setup.html#User_management" title="Cluster setup"> here</a>) 
+</p><p>1) Install the nas-node with
+<code>
+</p>
+<pre>insert-ethers --basename=cellar
+</pre>
+<p></code>
+</p><p>and choose appliance type as "NAS Appliance" on the GUI that opens from the head node. Enable a PXE boot on the storage node upon booting (F12). Partition the disk following the same partitioning as the head node except: DO NOT TOUCH sdb or format it. That is the RAID. (“Software comes and goes, data is forever” - some guy at San-Diego-Supercomputing-Center)
+</p><p>2) Then let cellar-0-0 reboot to the new Rocks version. At this point cellar sits with the partitions created above and all the RAID data present in <code>/dev/sdb1</code>. You can check by mounting <code>/dev/sdb1</code> using <code>mount /dev/sdb1 /some/mnt/point</code> and <code>/some/mnt/pnt/home</code> will have all the user data, each owned not by a user (because there are none!) but user IDs that go up from 1000 onwards. Again, It is recommended that prior to cluster upgrade, you have a list of all the usernames and IDs and a dummy test user to test user creation.
+</p>
+<h3><span class="mw-headline" id="Mount_RAID_on_cellar">Mount RAID on cellar</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=25" title="Edit section: Mount RAID on cellar">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Mount_through_xml_extensions">Mount through xml extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=26" title="Edit section: Mount through xml extensions">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>1) Make a copy of the extend-nas.xml file currently present in <code>/share/apps/admin_scripts</code>, and add these lines (IF NOT ALREADY PRESENT) right before the line at the bottom that should read <code>&lt;/kickstart&gt;</code>
+</p><p><code>
+</p>
+<pre>&lt;post&gt;
+&lt;eval shell="bash"&gt;mkdir -p /export/raid&lt;/eval&gt;
+&lt;file name="/etc/fstab" mode="append"&gt;
+/dev/sdb1               /export/raid            xfs    defaults        0 2
+&lt;/file&gt;
+&lt;file name="/etc/exports" mode="append"&gt;
+/export/raid 10.0.0.0/255.0.0.0(rw,no_root_squash,async)
+&lt;/file&gt;
+&lt;/post&gt;
+</pre>
+<p></code> 
+</p><p>2) Transfer this copy of the extend-nas.xml file to <code>/export/rocks/install/site-profiles/&lt;version&gt;/nodes</code>, where <code>&lt;version&gt;</code> is currently <code>7.0</code>. 
+</p><p>3) Then, from <code>/export/rocks/install</code>, run: 
+<code>
+</p>
+<pre>rocks create distro
+</pre>
+<p></code>
+</p><p>This will bind these instructions within the Rocks distro. Now, reinstall cellar.
+</p><p>WARNING: At this step, I messed up (deviated from the instructions given above) and got locked out from the cellar-0-0 node. So, I did a manual RAID mount at this point, the details of which are given below.
+</p>
+<h4><span class="mw-headline" id="Mount_manually">Mount manually</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=27" title="Edit section: Mount manually">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>1) Create the /export/raid directory with mkdir -p /export/raid.
+</p><p>2) Manually edit /etc/fstab and add:
+<code>
+</p>
+<pre>/dev/sdb1               /export/raid            xfs    defaults        0 2
+</pre>
+<p></code>
+</p><p>3) Manually edit /etc/exports and add:			
+<code>
+</p>
+<pre>/export/raid  10.0.0.0/255.0.0.0(rw,no_root_squash,async)
+</pre>
+<p></code>
+</p><p>4) Then run:
+<code>
+</p>
+<pre>mount -a
+exportfs -ra 
+</pre>
+<p></code>
+</p><p>for the changes to take effect immediately on cellar. Test that the nas mount went through by creating some arbitrary /mnt/point on head node and running mount cellar-0-0:/export/raid /mnt/point and check that you can see all the user data in /mnt/point/home. If you want you can also create a /export/data1 directory since Rocks automatically treats any dir called /export/data1 on the nas as mountable remotely.
+</p>
+<h3><span class="mw-headline" id="Mount_RAID_on_all_nodes">Mount RAID on all nodes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=28" title="Edit section: Mount RAID on all nodes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1) On the head node, add 
+<code>
+</p>
+<pre>cask0  cellar-0-0.local:/export/raid
+</pre>
+<p></code>
+</p><p>to the file <code>/etc/auto.home</code>. This will take effect when you restart the head node, but in this age of instant gratification, put it into effect immediately by running:
+<code>
+</p>
+<pre>/sbin/service autofs restart
+</pre>
+<p></code>
+</p><p>2) Migrate the change to all compute nodes using Rocks' 411 service:
+<code>
+</p>
+<pre>make -C /var/411 force
+rocks run host command=’411get --all’
+rocks run host command=’/sbin/service autofs restart’
+</pre>
+<p></code>
+</p><p>All of this has been encapsulated into the bash script <code>/share/apps/admin_scripts/manual_postinstall/hardmountraid.sh</code>. However, the xml extension approach is preferred since building <code>extend-nas.xml</code> directly into the Rocks distro makes all these steps automatic anytime there is a reboot.
+</p>
+<h3><span class="mw-headline" id="Add_users">Add users</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=29" title="Edit section: Add users">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>It is highly recommended that right before an upgrade, you create a dummy user (say, testuser) with some dummy password, on which you can run all these steps and make sure it works before adding real users.
+</p><p>1) Add users by running <code>system-config-users</code>. When you add users, make sure their home directory is /home/cask0/home/&lt;username&gt; and their user ID is the same as their user ID in the previous cluster configuration (this will preserve their ownership over their files). There were some upgrade-specific quirks:
+</p><p>For the Rocks 6.2 installation: Even with proper care to preserve all user metadata from previous cluster configuration, all users will be shown to be “nobody”. Without going into too many technicalities, the source of this problem is conflicting user metadata (so called nfs id maps) that ROCKS tries to salvage from the RAID. To remove this cached metadata type <code>nfsidmap -c</code>. This deletes any cached (and incorrect) metadata. More can be found <a rel="nofollow" class="external text" href="https://serverfault.com/questions/364613/centos-6-ldap-nfs-file-ownership-is-stuck-on-nobody">here</a>. NEVER do this to an active and healthy cluster. It will abolish everybody's ownership of their data.
+</p><p>For the Rocks 7.0 installation: User IDs below 1000 are now discouraged (previously, user IDs went from 500 upwards). We made users with their user IDs from the previous configuration and then ran <code>usermod -u NEWID USERNAME</code> to change their IDs to 1000 and above. This also takes care of transferring file ownership in the home directories to the new user ID.
+</p><p>2) Then run <code>rocks sync users</code> to update the user database on all nodes. Give the change several minutes to take place for each user. 
+</p>
+<h4><span class="mw-headline" id="Modify_user_login_details">Modify user login details</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=30" title="Edit section: Modify user login details">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A file called <code>login.sh</code> (keep a backup from the current system) is to be kept under <code>/share/apps</code>. This controls all the file paths, environment modules etc for all users.
+</p><p>1) At the end of <code>/etc/profile</code> add the line
+<code>
+</p>
+<pre>source /share/apps/login.sh
+</pre>
+<p></code>
+</p><p>2) Make a copy of the <code>extend-compute.xml</code> file in <code>/share/apps/admin_scripts</code> and add the following lines (IF NOT ALREADY PRESENT) before the line <code>&lt;/post&gt;</code>:
+<code>
+</p>
+<pre>&lt;eval shell="bash"&gt;
+mkdir -p /state/partition1/tmp
+&lt;/eval&gt;
+</pre>
+<pre>&lt;file name="/etc/profile" mode="append"&gt;
+source /share/apps/login.sh
+&lt;/file&gt;
+</pre>
+<p></code>
+</p><p>The first set of lines changes the system temporary directory to <code>/state/partition1/tmp</code> (more details of why this is done can be found <a href="Cluster_setup.html#Common_admin_tasks" title="Cluster setup"> here</a>.) The second set of lines adds the common login details to all compute nodes.
+</p><p>3) Put this new version of the <code>extend-compute.xml</code> file in <code>/export/rocks/install/site-profiles/&lt;version&gt;/nodes</code> where <code>&lt;version&gt;</code> is currently <code>7.0</code>. Then from <code>/export/rocks/install</code>, run
+<code>
+</p>
+<pre>rocks create distro
+</pre>
+<p></code>
+</p><p>to bind it into the current rocks distribution.
+</p><p>4) Finally reinstall the compute node/(s). Remember reinstalling and rebooting a computing node is different (more details <a href="Cluster_setup.html#Common_admin_tasks" title="Cluster setup"> here</a>). To reinstall, type
+<code>
+</p>
+<pre>rocks set host boot grape-0-0 action=install
+</pre>
+<p></code>
+</p><p>and then physically reboot the node. Again, as before with xml script extensions are the best approach since they make all these post-installation changes a part of the Rocks distro and thereby automatic. However, these instructions were collected and also placed in the bash script <code>/share/apps/admin_scripts/manual_postinstall/buildnodes.sh</code>, which can be used to run these post-install protocols manually, when a compute node is reinstalled.
+</p>
+<h3><span class="mw-headline" id="Create_a_queue">Create a queue</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=31" title="Edit section: Create a queue">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1) If needed, start SGE by running <code>/etc/init.d/sgemaster.zin start</code>
+</p><p>2) Make sure <code>sge_execd</code> is running on all compute nodes. If it is not, run:
+</p><p><code>
+</p>
+<pre>rocks run host compute “/opt/gridengine/default/common/sgeexecd start”
+</pre>
+<p></code>
+</p><p>3) Add all compute nodes to the list of hosts by running <code>qconf -mhgrp @allhosts</code>
+</p><p>4) Add the number of slots available in each compute node to the queue configuration by running: <code>qconf -mq all.q</code>. Modify "slots," which should be a list that looks like <code>1,[grape-0-0.local=8],[grape-0-1.local=8]</code> etc. (including all the compute nodes). 8 is the number of slots per node.
+</p><p>5) In order to allow nodes to send job status emails, you must install <code>mailq</code> on the compute nodes:
+</p><p><code>
+</p>
+<pre>rocks run host compute "yum clean all; yum -y install mailx"
+</pre>
+<p></code>
+</p>
+<h2><span class="mw-headline" id="RAID_array">RAID array</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=32" title="Edit section: RAID array">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Hardware_and_configuration">Hardware and configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=33" title="Edit section: Hardware and configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The RAID array is housed in a <a rel="nofollow" class="external text" href="https://downloads.dell.com/manuals/all-products/esuprt_ser_stor_net/esuprt_powervault/powervault-md1000_owner%27s%20manual_en-us.pdf">Dell Powervault MD1000</a>. This comes with a PERC 5/E RAID controller, which can handle 15 hard-drives, each up to 2 TB in size (note that hard drives that sell as "2 TB" are actually only around 1.8 TB) (other controllers, such as the PERC H800 can handle up to 4 TB drives). Available options for RAID levels may be found in the manual, though RAID 10 is strongly recommended.  While RAID 5 provides more space for the same number of drives, it is <a rel="nofollow" class="external text" href="https://superuser.com/questions/912673/are-raid-5-systems-suitable-for-larger-disk-sizes">highly error prone</a> once the size of each size becomes large (say bigger than about 1 TB).  The RAID has fourteen 3 TB drives in a RAID 10 configuration, providing 14 TB of storage due to the limitations of the PERC 5/E controller.  If the full amount of each drive could be utilized, the size of the RAID would grow to around 19.6 TB (drives sold as "3 TB" are actually only around 2.8 TB). Note that in a RAID 10, each drive has a partner that mirrors its data.  This means that you can lose half of your drives as long as you don't lose two partners, and if you do lose a pair you will only lose part of your data, not all of it, as with a RAID 5.  This also means that the RAID must be expanded by adding pairs of drives.  In other words, you always have to have an even number unless you have a hot spare.  A hot spare is a drive that sits spun up on the storage array, but does not hold any data.  If any other drives fail, the hot spare immediately takes its place.  Once the failed drive is replaced, it becomes the hot spare.  A hot spare is a nice system to have in place, and should be implemented if more drives are available.  However, the main advantage of a hot spare is that it minimizes cluster down time, not necessarily improved data security.  Without a hot spare, the cluster will be back online as soon as the failed drive is replaced, which will likely take no more than a day.
+</p>
+<h3><span class="mw-headline" id="Building.2FRebuilding.2FReconfiguring_the_RAID">Building/Rebuilding/Reconfiguring the RAID</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=34" title="Edit section: Building/Rebuilding/Reconfiguring the RAID">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>BEFORE STARTING, MAKE SURE ALL DATA IS SECURELY BACKED UP.  This means asking all users to back up their own data, then making a backup of /home/cask0/home.  You will need this backup to restore from and the user's individual backups if anything goes terribly wrong.
+</p><p>First, you need to reset the boot instructions for cellar so that it doesn't try (and fail) to find a formatted, mountable partition on the RAID array.  Unless you're doing minor reconfigurations of the RAID, you will need to manually create a file system and partition, as described below, before trying to mount them.  If you do not disable these boot instructions, boot will fail and require a root password to login and set things up.  Unfortunately, the default ROCKS behavior is to create a random password on every node that is not the head node, so you won't know the root password on cellar.  The way to manage any node as root is to login to the head node as root, then ssh into the node you want to work with.  This preserves security, so it is strongly advised that the individual node passwords remain random.  
+</p><p>Now, back to business - you want to essentially reverse the instructions in <a href="Cluster_setup.html#Mount_RAID_on_cellar" title="Cluster setup">Mount RAID on cellar</a>.  Make sure to make a copy of extend-nas.xml, then in /export/rocks/install/site-profiles/6.2/nodes/extend-nas.xml remove the lines at the bottom from &lt;post&gt; (inclusive) to &lt;/kickstart&gt; (not inclusive).  Then change directory to /export/rocks/install and run <code>rocks create distro</code>.  You can then either manually go in and unmount the RAID array on cellar, or attempt to force a PXE boot upon restart of cellar.  If the PXE boot doesn't work (you'll still see errors) run <code>rocks set host boot cellar-0-0 action=install</code> to make sure that cellar will reinstall upon boot and that it will follow the instructions in extend-nas.xml.  Just be careful when reinstalling that you manually partition everything according to the directions in <a href="Cluster_setup.html#Building_the_NAS-node_.28cellar-0-0.29" title="Cluster setup">Building the NAS-node (cellar-0-0)</a> (<a rel="nofollow" class="external text" href="https://ucsb.box.com/s/e1wdecqfagl5912uwok3za2fvkj8aadd">an example of what this looks like</a>).
+</p><p>Before working with the RAID array, it's probably a good idea to power down the entire cluster, including cellar.  This is not technically necessary if you have appropriately unmounted it, but is best practice.  Next, you will want to reboot cellar and on the load screen (<a rel="nofollow" class="external text" href="https://ucsb.box.com/s/p6yh9v3yokje7qwbqslc8rk6nhsmqd5g">an example of what this looks like</a>) hit ctrl-R to go into the RAID BIOS menu. In this menu, select the PERC 5/E controller ONLY - don't touch the other one.  If you're rebuilding or reconfiguring the RAID in a major fashion, highlight the RAID virtual drive using the arrow keys (<a rel="nofollow" class="external text" href="https://ucsb.box.com/s/v8h9ernxev93hq2ndc3g0l9b2uz0mica">an example of what this looks like</a>), then hit F2 to open a menu and delete this virtual drive. (Note: you may be able to use MegaCli for RAID reconfiguration. However, it does not seem to work for a RAID 10 configuration.)  You can now exit the menu, then power down cellar.  Next, power down the RAID array using the two switches in the back.
+</p><p>If you're swapping out drives, a useful order is to remove screws, pull off the SATA adapter plate, remove the drive, put the plate on the new drive, put the drive in the carrier, and then put the screws back in. Helpful diagrams are provided in the manual for the Dell Powervault MD1000.
+</p><p>Once you're done physically adjusting drives, power the RAID back on and reboot cellar, entering the RAID BIOS menu with ctrl-R.  There should now be no virtual disks, so create a new one.  Use tab to navigate between fields (helpful tip - use the spacebar to select physical drives). Note that for RAID 10, you need an even number of drives, unless you have a hot spare. Also note that by default the drive size will set itself to the maximum possible.  When done, hit "ok" to create the drive.  You then need to highlight the drive and hit F2, selecting "Initialization."  This process will take approximately 13 hours for 14 drives).
+</p><p>When initialization is complete, exit the RAID BIOS menu (press esc until you get an option to quit) and restart cellar with ctrl-alt-del.  Also restart the head node at this time - you will need it running in order to login to cellar as root.  Remember, if cellar doesn't boot (cellar booted successfully if you end up with a login screen without errors) due to an inability to locate /dev/sdb1 (the RAID array), you may need to force a reinstall as described above.  
+</p><p>Once cellar is started successfully, login to the head node as root and ssh into cellar.  Running <code>fdisk -l</code> will show you that the RAID is recognized on /dev/sdb, but you now need to create a mountable partition with a file system.  From the command line, run
+</p>
+<pre><code>parted /dev/sdb</code>
+</pre>
+<p>Within the parted command line, run the following commands:
+</p>
+<pre><code>mklabel gpt
+mkpart primary xfs 1MB -1
+quit</code>
+</pre>
+<p>This sets up a GUID partition table in the first command and creates a new partition in the second that expects an xfs file system and will start the partition at the first megabyte and end it at the very end of the drive (-1). Apparently, specifying a 0 instead of 1 MB is not optimal and parted will complain.
+</p><p>Now the partition will be created (when you run <code>fdisk -l</code> you will now see a partition called /dev/sdb1), but we need to actually put a file system on it.  This can be done from the command line with the following
+</p>
+<pre><code>mkfs -t xfs -d su=64k -d sw=5 /dev/sdb1</code>
+</pre>
+<p>If you get an error <code>mkfs.xfs: No such file or directory</code>, then install <code>xfsdump</code> with the following and then rerun the <code>mkfs</code> command above.
+</p>
+<pre><code>rocks run host cellar-0-0 "yum clean all; yum -y install xfsdump.x86_64"</code>
+</pre>
+<p>The partition will now be ready to mount, which can be done manually as described in <a href="Cluster_setup.html#Manual_mount" title="Cluster setup">Mount RAID on cellar</a>. (Note: if you get an error <code>exportfs: Failed to stat /export/data1: No such file or directory</code> then you need to <code>mkdir -p /export/data1</code> first.)
+</p><p>To check that all this worked, you can run <code>df -h</code>.  If you see /dev/sdb1 listed with the correct size and mounted at /export/raid, everything has been successful.  
+</p><p>Back on the head node, you will also want to make sure to follow the instructions in "Mounting through xml extensions" to modify the extend-nas.xml file appropriately and rerunning <code>rocks create distro</code>, etc.  To make sure all of this worked, you can restart cellar, even reinstalling to again make sure the appropriate commands are followed (though again, be careful with doing manual partitioning).  If the RAID is now appropriately mounted on cellar, go ahead and reboot the head node as well as the other cluster nodes.  With <code>df -h</code> you should now see an empty drive under /home/cask0/ (note that you may need to ls /home/cask0/ first because of the automount).  
+</p><p>At this point, you can transfer data back on from your backup by mounting the external hard drive. It's recommended, for efficiency, that you connect it directly to cellar. Then, ssh into cellar from the head node and run:
+</p>
+<pre><code>mkdir /media/externalHD
+mount /dev/sdc1 /media/externalHD</code>
+</pre>
+<p>As a helpful tip, create the backup with something along the lines of <code>rsync -avhP /home/cask0/home backup_directory_name_on_external_drive</code>, and the reverse when putting things back on.  The "a" will ensure that all of the appropriate permissions are applied so everything isn't owned by root when you put it back on.  In order to check and make sure everything has transferred correctly, you can run <code>rsync -avhP --checksum --dryrun ... </code> after the other rsync command.  If that does not print any file transfers that it would make, everything has been transferred accurately and you haven't missed anything.  Note that both file transfers and the checking process will take a very long time with a lot of data (approximately 0.5 TB per 6 hours).
+</p>
+<h3><span class="mw-headline" id="RAID_health">RAID health</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=35" title="Edit section: RAID health">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The primary tool for assessing RAID health, as well as managing the RAID setup from the command line, is MegaCli (download compatible with our Dell PowerVault MD1000 controller is <a rel="nofollow" class="external text" href="https://www.dell.com/support/article/us/en/19/sln292232/extracting-the-raid-controller-logs-via-megacli?lang=en">here</a>).  By googling, you can find many sites with <a rel="nofollow" class="external text" href="https://www.maths.cam.ac.uk/computing/docs/public/megacli_raid_lsi.html">useful commands for MegaCli</a>.
+</p><p>To generally check and make sure things are ok and check the RAID configuration, ssh to cellar-0-0 (as root) and then run:
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aAll </code>
+</pre>
+<p>This provides information on each of the adapters that is controlling a virtual disk (or array).  If you want more compact information about the virtual disks themselves run:
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -LDInfo -Lall -aAll </code>
+</pre>
+<p>And for information on all physical disks, run
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -PDList -aAll </code>
+</pre>
+<p>If you note the "Device Id" for each of the disks in the above command, you can further check disk health with the smartctl command line tool like:
+</p>
+<pre><code>smartctl -a -d sat+megaraid,&lt;Device Id&gt; /dev/sdb1 </code>
+</pre>
+<p>You'll need to do this for each disk, with a lot of output generated.
+</p>
+<h3><span class="mw-headline" id="Replacing_drives">Replacing drives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=36" title="Edit section: Replacing drives">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Sometimes a drive may fail and need to be replaced, or a drive may seem to be failing (causing lots of errors) and need to be preemptively replaced.   This is pretty easy to do, regardless of whether or not we have a dedicated hot-spare (meaning we have one drive on reserve to take over in case another fails).  To replace a drive, follow the directions below, or see <a rel="nofollow" class="external text" href="http://www.advancedclustering.com/act_kb/replacing-a-disk-with-megacli/">this</a>, for example. 
+</p><p>First figure out which drive is bad by checking the information generated in the section above.  You'll want to note the "Slot Number" of the drive to be replaced.
+</p><p>Next, you need to set the drive to be removed to be offline (not be used).  In what is below, the zero in "[0:&lt;Slot Number&gt;]" is the enclosure number, which should always be zero for our RAID setup, and the "-a1" refers to the adapter, where the RAID of interest is on adapter 1. Note that this command, and the two following (marking the drive as missing and preparing the drive for removal) may not work if the drive is already in the failed or "Bad" state, which you can check with the commands above. In that case, after confirming that none of the other drives is the hot spare (again, using the commands above), you can skip the next three steps and directly remove it.
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -pdoffline -physdrv[0:&lt;Slot Number&gt;] -a1 </code>
+</pre>
+<p>After this, mark the drive as missing.  The command below may or may not be successful, but try it anyway.  If it doesn't work, just try the next command and hope for no errors.
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -pdmarkmissing -physdrv[0:&lt;Slot Number&gt;] -a1 </code>
+</pre>
+<p>Next, prepare the drive for removal. This command may not work, even if the first two commands worked. 
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -pdprprmv -physdrv[0:&lt;Slot Number&gt;] -a1 </code>
+</pre>
+<p>When you run the above command successfully, the light above the drive to be removed should start blinking.  If it does not and you want to locate the drive, you can run:
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -PdLocate -start -physdrv[0:&lt;Slot Number&gt;] -a1 </code>
+</pre>
+<p>And to stop the blinking, run:
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -PdLocate -stop -physdrv[0:&lt;Slot Number&gt;] -a1 </code>
+</pre>
+<p>Now you can remove the disk and replace it with a new one.  The hardware manual is located <a rel="nofollow" class="external text" href="https://ucsb.box.com/s/eictbvzoo8at32hmcni4l5xgtmudnby2">here</a> in case you want to feel slightly better about what you're doing, but also slightly more confused. (Note: you need to remove both the SATA adapter as well as the screws from the casing before you can slip the drive out.)  
+</p><p>Once the new disk is inserted, you need to designate it as the dedicated hot spare:
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -PDHSP -Set -Dedicated -Array0 -PhysDrv [0:&lt;Slot Number&gt;] -a1 </code>
+</pre>
+<p>OR, if your RAID configuration supports disk mirroring, you instead will need to note that the new drive replaces the previously failed drive that was marked missing and then start the rebuilding process. (It's possible that the rebuilding process will start automatically after you put the new drive in, in which case these two commands will not work.):
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -pdreplacemissing -physdrv[0:&lt;Slot Number&gt;] -Array&lt;Span Number&gt; -row&lt;Arm Number&gt; -a1
+/opt/MegaRAID/MegaCli/MegaCli64 -pdrbld -Start -physdrv[0:&lt;Slot Number&gt;] -a1</code>
+</pre>
+<p>You can get Span Number and Arm Number by executing the following and looking for the slot number of the drive you're replacing:
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -CfgDsply -aALL </code>
+</pre>
+<p>To check and make sure everything is alright, you'll probably want to look through information that can be generated by commands in the section above. You can also check the drive's rebuilding progress:
+</p>
+<pre><code>/opt/MegaRAID/MegaCli/MegaCli64 -pdrbld -ShowProg -physdrv[0:&lt;Slot Number&gt;] -a1</code>
+</pre>
+<h2><span class="mw-headline" id="Web_server_.28i.e._this_wiki.29">Web server (i.e. this wiki)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=37" title="Edit section: Web server (i.e. this wiki)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Configuring_the_wiki_permissions">Configuring the wiki permissions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=38" title="Edit section: Configuring the wiki permissions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Add the following (if not already present) to /var/www/html/wiki/LocalSettings.php:
+</p>
+<pre><code># Prevent new user registrations except by sysops
+$wgGroupPermissions['*']['createaccount'] = false; 
+
+# Prevent anonymous editing
+$wgGroupPermissions['*']['edit'] = false;
+
+# Prevent anonymous reading
+$wgGroupPermissions['*']['read'] = false;
+
+# Pages anonymous (not-logged-in) users may see
+$wgWhitelistRead = array ("Main Page", "Special:Userlogin", "Wikipedia:Help");
+</pre>
+<p></code>
+</p>
+<h3><span class="mw-headline" id="Changing_a_user_password">Changing a user password</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=39" title="Edit section: Changing a user password">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Enable the <a class="external text" href="http://www.mediawiki.org/wiki/Manual:Maintenance_scripts">maintenance scripts</a>.  Then run the <a class="external text" href="http://www.mediawiki.org/wiki/Manual:FAQ#How_do_I_reset_a_password.3F">changePassword.php script</a>:
+<code>
+</p>
+<pre>php changePassword.php --user=someuser --password=somepass
+</pre>
+<p></code>
+</p>
+<h3><span class="mw-headline" id="Backing_up_the_wiki">Backing up the wiki</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=40" title="Edit section: Backing up the wiki">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This should be done periodically.  It is also useful in that it creates a local, readable version of the wiki so that if the wiki goes down you can still reference this local version.
+</p>
+<ol start="1">
+<li>Run wget to create a static local copy of the wiki.
+
+<pre>
+wget --mirror --convert-links --html-extension --no-parent --random-wait --page-requisites \
+--load-cookies=cookies.txt http://zin.cnsi.ucsb.edu/wiki/index.php/Main_Page 
+</pre>
+<p>This uses wget to recursively pull all pages connected to the wiki main page, with the exception of external links. All materials necessary to reconstruct the html pages are downloaded and linked to each other, allowing you to view the wiki without access to the internet, but using a web-browser with fully populated and connected web pages saved on your computer. All you need to do is open the 'index.php' folder with Firefox or another web browser, or open the 'Main_Page' file. The links to almost all other pages will work from this page. This is just a static reconstruction and will not contain information necessary for actually recreating the wiki with the wikitext mark-up language. This information will be collected in later steps, but here you have just created a reference for how things should look.
+</p><p>Note that this requires a 'cookies.txt' file. This is what allows you to log in to the wiki and access the full content of all of the pages. To generate this file, simply log in to the wiki, then use a tool like the Firefox Export Cookies add-on to save such a file. Notice that there is not a 'cookies.txt' file currently in this back-up directory. This file must uniquely be generated before a back-up!
+</p>
+</li>
+<li>Save a backup of /var/www/html/wiki/LocalSettings.php. This backs up preferences and settings. This is not strictly necessary, as this file may easily be set-up again through the MediaWiki installer, but it’s nice to have as a reference. 
+</li>
+<li>In /var/www/html/wiki/LocalSettings.php, uncomment the line:
+
+<pre>
+$wgReadOnly = 'Dumping Database, Access will be restored shortly';
+</pre>
+</li>
+<li>Run the following wherever you want the zipped back-up database to go:
+
+<pre>
+mysqldump -h localhost -u wikiuser -p wikidb --skip-lock-tables | bzip2 &gt; backup_name.sql.bz2
+</pre>
+<p>When prompted, enter the password listed in /var/www/html/wiki/LocalSettings.php under wgDBpassword. 
+</p>
+</li>
+<li>Back up the images in the wiki. Technically, this should have already been done in step 1. However, just to be safe, run the following:
+
+<pre>
+tar cjvf /backup_location/images.tar.bz2 /var/www/html/wiki/images/
+</pre>
+<p>Change backup_location to wherever you are saving the backup.
+</p>
+</li>
+<li>Finally, comment out the line in /var/www/html/wiki/LocalSettings.php that was previously commented in:
+<pre>
+#$wgReadOnly = 'Dumping Database, Access will be restored shortly';
+</pre>
+</li>
+</ol>
+<h3><span class="mw-headline" id="Restoring_the_wiki_from_a_backup">Restoring the wiki from a backup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=41" title="Edit section: Restoring the wiki from a backup">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The key to easily restoring is having done steps 2-4 in <a href="Cluster_setup.html#Backing_up_the_wiki">#Backing up the wiki</a>, since step 1 just sets up a local image of the wiki for personal reference. More detailed directions may be found <a class="external text" href="https://www.mediawiki.org/wiki/Manual:Restoring_a_wiki_from_backup">here</a>, but the short version is presented below. 
+</p>
+<ol start="1">
+
+<li> If not already present, copy the files for MediaWiki 1.23 from <a rel="nofollow" class="external text" href="https://releases.wikimedia.org/mediawiki/1.23/mediawiki-1.23.0.tar.gz">this tar file</a> into <code>/var/www/html/wiki</code>.
+
+</li>
+<li> Wipe the current database (should be named wikidb)
+
+<pre>
+mysqladmin -u root -p drop wikidb
+</pre>
+<p>The password you use for this may be found in /root/.rocks.my.cnf.  The normal root password will not work here.
+</p>
+</li>
+<li>Next, open a mysql command prompt by typing
+
+<pre>
+mysql -u root -p
+</pre>
+<p>(use the same root password as in step 1 when prompted).
+</p>
+</li>
+<li>Create a fresh database with
+
+<pre>
+CREATE DATABASE wikidb;
+USE wikidb;	
+</pre>
+</li>
+<li>If this is a cluster re-install, you will also need to create a user to manage this database. This is so that root does not need to be used all the time. This will maintain consistency with any old LocalSettings.php files, and if re-installing MediaWiki and creating a new LocalSettings.php file, make sure to set the user and password the same as found in the fields ‘wgDBuser‘ and ‘wgDBpassword‘ in the backed up LocalSettings.php file. To create this user, run:
+
+<pre>
+CREATE USER ‘wgDBuser‘ IDENTIFIED BY ‘wgDBpassword’;
+GRANT SELECT, UPDATE, INSERT, DELETE, ALTER, CREATE, INDEX, USAGE ON wikidb.* TO ‘wgDBuser‘;
+quit
+</pre>
+<p>When this is done, quit the mysql prompt with quit (as shown above).
+</p>
+</li>
+<li>Finally, load in the old database with
+
+<pre>
+mysql -u root -p wikidb &lt; backup.sql
+</pre>
+</li>
+<li>To get things working, an update will likely be necessary. Copy over LocalSettings.php into /var/www/html/wiki, and then type
+
+<pre>
+php maintenance/update.php
+</pre>
+</li>
+<li>If step 6 fails, or the wiki is still not visible/restored at this point, you should try and re-install MediaWiki by deleting LocalSettings.php, going to zin.cnsi.ucsb.edu/wiki in a web browser and following the steps to set-up the wiki again.  After doing this, you may need to go back to step 6, or all the way back to step 1 and repeat until this step is unnecessary.
+</li>
+<li>Finally, copy the backed-up images into the <code>/var/www/html/wiki/images/</code>
+</li>
+</ol>
+<p>Note: If you are having difficulties in setting up the database on a fresh install of Rocks (error like ‘Can’t connect to local MySQL server through socket…’), you may need to symlink /var/lib/mysql/mysql.sock to /var/opt/rocks/mysql/mysql.sock using 
+</p><p><code>
+</p>
+<pre>ln -s /var/opt/rocks/mysql/mysql.sock /var/lib/mysql/mysql.sock
+</pre>
+<p></code>
+</p><p>Where in the above, the second option passed is the link location and the first is the file that it will point to.
+</p>
+<h3><span class="mw-headline" id="Managing_the_wiki_from_the_web">Managing the wiki from the web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit&amp;section=42" title="Edit section: Managing the wiki from the web">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>You can manage many features of the wiki, like adding new users or changing user passwords, by logging in to the wiki as WikiSysop and navigating to <a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special_pages&amp;action=edit&amp;redlink=1" class="new" title="Special pages (page does not exist)">Special pages</a> (on the left under "tools").  Only the WikiSysop user has privileges to access and perform actions associated with the links on this page.  You can login to this user with the password found in LocalSettings.php under wgDBpassword.
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.124 seconds
+Real time usage: 0.125 seconds
+Preprocessor visited node count: 268/1000000
+Preprocessor generated node count: 396/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb:pcache:idhash:1280-0!*!0!!en!*!* and timestamp 20231009224512 and revision id 2005
+ -->
+</div>								<div class="printfooter">
+				Retrieved from "<a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;oldid=2005">http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;oldid=2005</a>"				</div>
+												<div id='catlinks' class='catlinks catlinks-allhidden'></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-userpage"><a href="./User:Thuang.html" class="new" dir="auto" title="Your user page [.]" accesskey=".">Thuang</a></li><li id="pt-mytalk"><a href="./User_talk:Thuang.html" class="new" title="Your talk page [n]" accesskey="n">Talk</a></li><li id="pt-preferences"><a href="./Special:Preferences.html" title="Your preferences">Preferences</a></li><li id="pt-watchlist"><a href="./Special:Watchlist.html" title="A list of pages you are monitoring for changes [l]" accesskey="l">Watchlist</a></li><li id="pt-mycontris"><a href="./Special:Contributions/Thuang.html" title="A list of your contributions [y]" accesskey="y">Contributions</a></li><li id="pt-logout"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Special:UserLogout&amp;returnto=Cluster+setup" title="Log out">Log out</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="Cluster_setup.html"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk" class="new"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Talk:Cluster_setup&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="Cluster_setup.html#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="Cluster_setup.html" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+					<li id="ca-watch" class="icon"><span><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=watch&amp;token=7ef7fb91c054615448df0498b988e65e%2B%5C"  title="Add this page to your watchlist [w]" accesskey="w">Watch</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="Cluster_setup.html#"></a></h3>
+	<div class="menu">
+		<ul>
+							<li id="ca-move"><a href="./Special:MovePage/Cluster_setup.html"  title="Move this page [m]" accesskey="m">Move</a></li>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="http://zin.cnsi.ucsb.edu/wiki/index.php" id="searchform">
+					<div id="simpleSearch">
+					<input type="search" name="search" placeholder="Search" title="Search MSSGroupWiki [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(../images/mssgroup/wikilogo.png);" href="Main_Page.html"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="Main_Page.html" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-recentchanges"><a href="./Special:RecentChanges.html" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-randompage"><a href="./Special:Random.html" title="Load a random page [x]" accesskey="x">Random page</a></li>
+			<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Tools</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="./Special:WhatLinksHere/Cluster_setup.html" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="./Special:RecentChangesLinked/Cluster_setup.html" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="./Special:Upload.html" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="./Special:SpecialPages.html" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-print"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+			<li id="t-permalink"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;oldid=2005" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php?title=Cluster_setup&amp;action=info">Page information</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 4 October 2023, at 19:00.</li>
+											<li id="footer-info-viewcount">This page has been accessed 858 times.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:Privacy_policy" title="MSSGroupWiki:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:About" title="MSSGroupWiki:About">About MSSGroupWiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://zin.cnsi.ucsb.edu/wiki/index.php/MSSGroupWiki:General_disclaimer" title="MSSGroupWiki:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","mediawiki.page.watch.ajax","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":206});
+}</script>
+	</body>
+</html>
